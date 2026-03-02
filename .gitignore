@@ -1,0 +1,70 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+*.whl
+
+# Virtual Environment
+.venv/
+venv/
+ENV/
+env/
+
+# PyTorch Model Checkpoints
+*.pth
+*.pt
+*.ckpt
+best_*.pth
+
+# Training Results
+training_results.json
+submission*.csv
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Data
+output/
+*.zip
+data/
+dataset/
+
+# Logs
+*.log
+logs/
+runs/
+wandb/
+
+# Cache
+.cache/
+*.cache
+.pytest_cache/
+
+# PyTorch/CUDA Cache
+torch_extensions/
+.torch/
+
+# Misc
+*.pdf
+*.bat
+test.txt
+report.txt
