@@ -63,10 +63,10 @@ config = Config()
 
 # SIMPLIFIED augmentation - much faster
 def get_train_transforms():
-    """Lightweight augmentation for faster training"""
+    """Lightweight augmentation for faster training - NO FLIPS for left/right preservation"""
     return A.Compose([
         A.Resize(config.img_size, config.img_size),
-        A.HorizontalFlip(p=0.5),
+        # REMOVED: A.HorizontalFlip(p=0.5),  # Would incorrectly swap ear-left/right, nose-left/right!
         A.Rotate(limit=10, p=0.3),
         A.RandomBrightnessContrast(brightness_limit=0.2, contrast_limit=0.2, p=0.5),
         A.ShiftScaleRotate(shift_limit=0.05, scale_limit=0.1, rotate_limit=10, p=0.3),
@@ -245,13 +245,17 @@ def train_model(train_data, val_data, fold):
     # Create model
     model = MedicalModel(config.model_name, config.num_classes).to(config.device)
     
-    # Compile model for faster execution (PyTorch 2.0+)
+    # Compile model for faster execution (PyTorch 2.0+) - Skip on Windows
     if hasattr(torch, 'compile'):
         try:
-            model = torch.compile(model)
-            print("✓ Model compiled for faster execution")
-        except:
-            print("⚠ Model compilation not available")
+            import platform
+            if platform.system() != 'Windows':
+                model = torch.compile(model)
+                print("✓ Model compiled for faster execution")
+            else:
+                print("⚠ Model compilation skipped (Windows - Triton not supported)")
+        except Exception as e:
+            print(f"⚠ Model compilation not available: {e}")
     
     # Weighted loss
     class_weights = get_loss_weights(train_data, config.class_to_idx, config.device)

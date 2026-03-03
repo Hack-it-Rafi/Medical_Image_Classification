@@ -37,7 +37,7 @@ class Config:
     test_img_dir = 'output/test/imgs'
     
     # DESIGN CHOICE: Two complementary models (CNN + Transformer)
-    model_names = ['efficientnet_b2', 'convnext_tiny']  # Fast but powerful
+    model_names = ['convnext_tiny', 'efficientnet_b2']  # Fast but powerful
     img_size = 288  # Sweet spot: better than 224, faster than 384
     num_classes = 7
     
@@ -78,7 +78,8 @@ config = Config()
 def get_train_transforms():
     """
     Medical imaging augmentation strategy:
-    - No vertical flip (anatomically incorrect)
+    - NO horizontal flip (would swap left/right labels incorrectly!)
+    - NO vertical flip (anatomically incorrect)
     - Limited rotation (preserve orientation)
     - Contrast/brightness for different imaging devices
     - Noise simulation for real-world conditions
@@ -86,8 +87,8 @@ def get_train_transforms():
     return A.Compose([
         A.Resize(config.img_size, config.img_size),
         
-        # Geometric (anatomy-aware)
-        A.HorizontalFlip(p=0.5),  # Mirror symmetry is valid
+        # Geometric (anatomy-aware) - NO FLIPS!
+        # REMOVED: A.HorizontalFlip(p=0.5),  # Would mislabel ear-left/right, nose-left/right!
         A.Rotate(limit=12, p=0.4),  # Small rotation only
         A.ShiftScaleRotate(shift_limit=0.06, scale_limit=0.12, rotate_limit=12, p=0.4),
         
@@ -121,22 +122,23 @@ def get_val_transforms():
     ])
 
 def get_tta_transforms():
-    """Test-Time Augmentation transforms"""
+    """Test-Time Augmentation transforms - NO FLIPS for left/right preservation"""
     return [
         A.Compose([
             A.Resize(config.img_size, config.img_size),
             A.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
             ToTensorV2()
         ]),
+        # REMOVED: HorizontalFlip TTA variant - would mislabel left/right anatomical regions
         A.Compose([
             A.Resize(config.img_size, config.img_size),
-            A.HorizontalFlip(p=1.0),
+            A.RandomBrightnessContrast(brightness_limit=0.1, contrast_limit=0.1, p=1.0),
             A.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
             ToTensorV2()
         ]),
         A.Compose([
             A.Resize(config.img_size, config.img_size),
-            A.RandomBrightnessContrast(brightness_limit=0.1, contrast_limit=0.1, p=1.0),
+            A.CLAHE(clip_limit=2.0, p=1.0),
             A.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
             ToTensorV2()
         ]),
@@ -452,13 +454,17 @@ def train_model(model_name, train_data, val_data, fold):
     # Create model
     model = MedicalClassifier(model_name, config.num_classes).to(config.device)
     
-    # Try to compile model (PyTorch 2.0+)
-    if hasattr(torch, 'compile'):
-        try:
-            model = torch.compile(model, mode='max-autotune')
-            print("✓ Model compiled with max-autotune")
-        except:
-            print("⚠ Model compilation not available")
+    # Try to compile model (PyTorch 2.0+) - Skip on Windows or if Triton unavailable
+    # if hasattr(torch, 'compile'):
+    #     try:
+    #         import platform
+    #         if platform.system() != 'Windows':
+    #             model = torch.compile(model, mode='max-autotune')
+    #             print("✓ Model compiled with max-autotune")
+    #         else:
+    #             print("⚠ Model compilation skipped (Windows - Triton not supported)")
+    #     except Exception as e:
+    #         print(f"⚠ Model compilation not available: {e}")
     
     # Focal Loss with class weights
     alpha = get_focal_loss_alpha(train_data, config.class_to_idx, config.device)

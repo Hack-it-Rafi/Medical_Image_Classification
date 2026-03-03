@@ -36,16 +36,16 @@ class Config:
     test_img_dir = 'output/test/imgs'
     
     # Model settings
-    model_names = ['efficientnet_b3', 'convnext_base', 'swinv2_base_window12_192_22k']
+    model_names = ['convnext_tiny', 'efficientnet_b3']
     img_size = 384
     num_classes = 7
     
     # Training settings
     batch_size = 16
-    num_epochs = 50
+    num_epochs = 40
     learning_rate = 1e-4
     weight_decay = 1e-5
-    num_folds = 5
+    num_folds = 4
     
     # Device
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
@@ -58,12 +58,12 @@ config = Config()
 
 # Advanced augmentation for training with medical-specific improvements
 def get_train_transforms():
-    """Anatomy-aware augmentation - removed VerticalFlip, added medical-specific augmentations"""
+    """Anatomy-aware augmentation - NO FLIPS to preserve left/right anatomical labels"""
     return A.Compose([
         A.Resize(config.img_size, config.img_size),
-        A.HorizontalFlip(p=0.5),
+        # REMOVED: A.HorizontalFlip(p=0.5),  # Would swap left/right labels incorrectly!
         # REMOVED: A.VerticalFlip(p=0.3),  # Not anatomically correct for medical images
-        A.Rotate(limit=15, p=0.4),  # Reduced rotation - anatomical orientation matters
+        A.Rotate(limit=15, p=0.4),  # Small rotation only - anatomical orientation matters
         
         # Medical imaging specific augmentations
         A.RandomGamma(gamma_limit=(80, 120), p=0.4),  # Different imaging devices
@@ -83,7 +83,7 @@ def get_train_transforms():
         
         A.CLAHE(clip_limit=4.0, p=0.4),
         A.ShiftScaleRotate(shift_limit=0.08, scale_limit=0.15, rotate_limit=15, p=0.4),
-        A.CoarseDropout(max_holes=4, max_height=24, max_width=24, p=0.2),  # Reduced
+        A.CoarseDropout(max_holes=4, max_height=24, max_width=24, p=0.2),
         
         A.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
         ToTensorV2()
@@ -168,7 +168,7 @@ def train_epoch(model, dataloader, criterion, optimizer, scheduler, device, scal
         optimizer.zero_grad()
         
         # Mixed precision training
-        with torch.cuda.amp.autocast():
+        with torch.amp.autocast("cuda"):
             outputs = model(images)
             loss = criterion(outputs, labels)
         
@@ -321,11 +321,23 @@ def main():
         print(f'GPU: {torch.cuda.get_device_name(0)}')
         print(f'Memory: {torch.cuda.get_device_properties(0).total_memory / 1024**3:.2f} GB')
     
+    # RESUME TRAINING CONFIGURATION
+    # Set which model and fold to resume from (set to None to train from scratch)
+    resume_model = 'efficientnet_b3'  # Change to None to start from beginning
+    resume_from_fold = 1  # Start from fold 2 (0-indexed, so this is fold 3)
+    
+    print(f'\n{"="*60}')
+    print(f'RESUMING TRAINING')
+    print(f'{"="*60}')
+    print(f'Resume model: {resume_model}')
+    print(f'Resume from fold: {resume_from_fold}')
+    print(f'Skipping already trained models/folds...\n')
+    
     # Load training data
     with open(config.train_data_path, 'r') as f:
         train_data = json.load(f)
     
-    print(f'\nTotal training samples: {len(train_data)}')
+    print(f'Total training samples: {len(train_data)}')
     
     # Count samples per class
     class_counts = {}
@@ -348,7 +360,27 @@ def main():
     for model_name in config.model_names:
         fold_results = []
         
+        # Skip models before the resume point
+        if resume_model is not None:
+            model_idx = config.model_names.index(model_name)
+            resume_idx = config.model_names.index(resume_model)
+            if model_idx < resume_idx:
+                print(f'\n⏭️  Skipping {model_name} (already trained)')
+                continue
+        
         for fold, (train_idx, val_idx) in enumerate(skf.split(train_data, label_indices)):
+            # Skip folds before the resume point
+            if resume_model is not None and model_name == resume_model and fold < resume_from_fold:
+                # Check if model file exists and load its results
+                model_path = f'best_{model_name}_fold{fold}.pth'
+                if os.path.exists(model_path):
+                    print(f'⏭️  Skipping {model_name} fold {fold} (already trained)')
+                    # You can load validation results here if you saved them
+                    fold_results.append({'acc': 0.0, 'f1': 0.0})  # Placeholder
+                    continue
+                else:
+                    print(f'⚠️  Model file {model_path} not found, training from scratch')
+            
             train_fold = [train_data[i] for i in train_idx]
             val_fold = [train_data[i] for i in val_idx]
             
@@ -358,8 +390,8 @@ def main():
         results[model_name] = fold_results
         
         # Print fold results
-        avg_acc = np.mean([r['acc'] for r in fold_results])
-        avg_f1 = np.mean([r['f1'] for r in fold_results])
+        avg_acc = np.mean([r['acc'] for r in fold_results if r['acc'] > 0])
+        avg_f1 = np.mean([r['f1'] for r in fold_results if r['f1'] > 0])
         print(f'\n{model_name} - Average Validation Accuracy: {avg_acc:.2f}%')
         print(f'{model_name} - Average Validation F1: {avg_f1:.4f}')
     
