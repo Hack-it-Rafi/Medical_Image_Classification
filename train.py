@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
 import torch.optim as optim
-from torch.utils.data import Dataset, DataLoader
+from torch.utils.data import Dataset, DataLoader, WeightedRandomSampler
 from torchvision import transforms
 import timm
 from PIL import Image
@@ -56,23 +56,36 @@ class Config:
 
 config = Config()
 
-# Advanced augmentation for training
+# Advanced augmentation for training with medical-specific improvements
 def get_train_transforms():
+    """Anatomy-aware augmentation - removed VerticalFlip, added medical-specific augmentations"""
     return A.Compose([
         A.Resize(config.img_size, config.img_size),
         A.HorizontalFlip(p=0.5),
-        A.VerticalFlip(p=0.3),
-        A.Rotate(limit=30, p=0.5),
-        A.RandomBrightnessContrast(brightness_limit=0.2, contrast_limit=0.2, p=0.5),
-        A.GaussNoise(var_limit=(10.0, 50.0), p=0.3),
-        A.GaussianBlur(blur_limit=(3, 7), p=0.3),
-        A.CLAHE(clip_limit=4.0, p=0.3),
-        A.ShiftScaleRotate(shift_limit=0.1, scale_limit=0.2, rotate_limit=30, p=0.5),
-        A.CoarseDropout(max_holes=8, max_height=32, max_width=32, p=0.3),
-        A.Normalize(
-            mean=[0.485, 0.456, 0.406],
-            std=[0.229, 0.224, 0.225]
-        ),
+        # REMOVED: A.VerticalFlip(p=0.3),  # Not anatomically correct for medical images
+        A.Rotate(limit=15, p=0.4),  # Reduced rotation - anatomical orientation matters
+        
+        # Medical imaging specific augmentations
+        A.RandomGamma(gamma_limit=(80, 120), p=0.4),  # Different imaging devices
+        A.Sharpen(alpha=(0.2, 0.5), lightness=(0.5, 1.0), p=0.3),  # Enhance anatomical details
+        A.Equalize(p=0.2),  # Enhance contrast for subtle features
+        
+        A.RandomBrightnessContrast(brightness_limit=0.15, contrast_limit=0.15, p=0.4),
+        A.HueSaturationValue(hue_shift_limit=10, sat_shift_limit=15, val_shift_limit=10, p=0.3),
+        
+        A.GaussNoise(var_limit=(5.0, 30.0), p=0.3),
+        A.ISONoise(color_shift=(0.01, 0.05), intensity=(0.1, 0.5), p=0.2),  # Camera sensor noise
+        
+        A.OneOf([
+            A.GaussianBlur(blur_limit=(3, 5), p=1.0),
+            A.MotionBlur(blur_limit=5, p=1.0),
+        ], p=0.3),
+        
+        A.CLAHE(clip_limit=4.0, p=0.4),
+        A.ShiftScaleRotate(shift_limit=0.08, scale_limit=0.15, rotate_limit=15, p=0.4),
+        A.CoarseDropout(max_holes=4, max_height=24, max_width=24, p=0.2),  # Reduced
+        
+        A.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
         ToTensorV2()
     ])
 
@@ -207,6 +220,31 @@ def validate(model, dataloader, criterion, device):
     
     return running_loss / len(dataloader), acc, f1
 
+# Helper function to get class weights for weighted sampling
+def get_class_weights(train_data, label_map):
+    """Calculate class weights for imbalanced dataset"""
+    class_counts = {}
+    for item in train_data:
+        label = label_map[item['anatomical_region']]
+        class_counts[label] = class_counts.get(label, 0) + 1
+    
+    total = len(train_data)
+    weights = {label: total / count for label, count in class_counts.items()}
+    sample_weights = [weights[label_map[item['anatomical_region']]] for item in train_data]
+    return torch.DoubleTensor(sample_weights)
+
+# Helper function to get loss weights
+def get_loss_weights(train_data, label_map, device):
+    """Calculate class weights for weighted loss"""
+    class_counts = torch.zeros(len(label_map))
+    for item in train_data:
+        label = label_map[item['anatomical_region']]
+        class_counts[label] += 1
+    
+    # Inverse frequency weights
+    class_weights = len(train_data) / (len(label_map) * class_counts)
+    return class_weights.to(device)
+
 # Main training function
 def train_model(model_name, train_data, val_data, fold):
     print(f'\n{"="*50}')
@@ -217,16 +255,22 @@ def train_model(model_name, train_data, val_data, fold):
     train_dataset = MedicalImageDataset(train_data, config.train_img_dir, get_train_transforms())
     val_dataset = MedicalImageDataset(val_data, config.train_img_dir, get_val_transforms())
     
+    # IMPROVEMENT: Weighted sampling for class imbalance
+    sample_weights = get_class_weights(train_data, config.class_to_idx)
+    sampler = WeightedRandomSampler(sample_weights, len(sample_weights))
+    
     train_loader = DataLoader(train_dataset, batch_size=config.batch_size, 
-                              shuffle=True, num_workers=4, pin_memory=True)
+                              sampler=sampler, num_workers=4, pin_memory=True)
     val_loader = DataLoader(val_dataset, batch_size=config.batch_size, 
                            shuffle=False, num_workers=4, pin_memory=True)
     
     # Create model
     model = EnsembleModel(model_name, config.num_classes).to(config.device)
     
-    # Loss and optimizer
-    criterion = LabelSmoothingCrossEntropy(smoothing=0.1)
+    # IMPROVEMENT: Weighted loss function for class imbalance
+    class_weights = get_loss_weights(train_data, config.class_to_idx, config.device)
+    criterion = nn.CrossEntropyLoss(weight=class_weights, label_smoothing=0.1)
+    
     optimizer = optim.AdamW(model.parameters(), lr=config.learning_rate, 
                            weight_decay=config.weight_decay)
     
@@ -236,7 +280,7 @@ def train_model(model_name, train_data, val_data, fold):
     )
     
     # Mixed precision scaler
-    scaler = torch.cuda.amp.GradScaler()
+    scaler = torch.amp.GradScaler("cuda")
     
     best_acc = 0.0
     best_f1 = 0.0

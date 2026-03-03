@@ -10,6 +10,7 @@ from tqdm import tqdm
 import albumentations as A
 from albumentations.pytorch import ToTensorV2
 from collections import Counter
+import pandas as pd
 import warnings
 warnings.filterwarnings('ignore')
 
@@ -36,8 +37,9 @@ class Config:
 
 config = Config()
 
-# Test-time augmentation transforms
+# Test-time augmentation transforms (IMPROVED - removed VerticalFlip)
 def get_tta_transforms():
+    """Test-time augmentation transforms - anatomically correct"""
     transforms_list = []
     
     # Original
@@ -55,19 +57,27 @@ def get_tta_transforms():
         ToTensorV2()
     ]))
     
-    # Vertical flip
+    # Slight rotation
     transforms_list.append(A.Compose([
         A.Resize(config.img_size, config.img_size),
-        A.VerticalFlip(p=1.0),
+        A.Rotate(limit=10, p=1.0),
         A.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
         ToTensorV2()
     ]))
     
-    # Both flips
+    # Brightness adjustment
+    transforms_list.append(A.Compose([
+        A.Resize(config.img_size, config.img_size),
+        A.RandomBrightnessContrast(brightness_limit=0.1, contrast_limit=0.1, p=1.0),
+        A.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
+        ToTensorV2()
+    ]))
+    
+    # Horizontal flip + rotation
     transforms_list.append(A.Compose([
         A.Resize(config.img_size, config.img_size),
         A.HorizontalFlip(p=1.0),
-        A.VerticalFlip(p=1.0),
+        A.Rotate(limit=10, p=1.0),
         A.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
         ToTensorV2()
     ]))
@@ -140,7 +150,7 @@ def predict_with_tta(model, image, device):
     avg_probs = np.mean(predictions, axis=0)
     return avg_probs
 
-# Main inference function
+# IMPROVED: Main inference function with ensemble and TTA
 def inference():
     print(f'Using device: {config.device}')
     if config.device == 'cuda':
@@ -151,9 +161,12 @@ def inference():
         test_data = json.load(f)
     
     print(f'\nTotal test samples: {len(test_data)}')
+    print(f'Using Ensemble of {len(config.model_names)} architectures × {config.num_folds} folds = {len(config.model_names) * config.num_folds} models')
+    print(f'Using Test-Time Augmentation with 5 variations per model')
     
     # Prepare results
     results = []
+    all_confidences = []
     
     # Process each test image
     for item in tqdm(test_data, desc='Processing test images'):
@@ -169,7 +182,6 @@ def inference():
                 model_path = f'best_{model_name}_fold{fold}.pth'
                 
                 if not os.path.exists(model_path):
-                    print(f'Warning: Model not found: {model_path}')
                     continue
                 
                 # Load model
@@ -193,6 +205,10 @@ def inference():
                 # Average TTA predictions for this fold
                 avg_fold_pred = np.mean(fold_predictions, axis=0)
                 all_predictions.append(avg_fold_pred)
+                
+                # Clean up
+                del model
+                torch.cuda.empty_cache()
         
         # Average all predictions (ensemble)
         if all_predictions:
@@ -202,7 +218,7 @@ def inference():
             confidence = final_probs[predicted_class]
         else:
             # Fallback if no models found
-            predicted_label = item['anatomical_region']
+            predicted_label = 'throat'  # Default to most uncertain class
             confidence = 0.0
         
         results.append({
@@ -210,12 +226,21 @@ def inference():
             'anatomical_region': predicted_label,
             'confidence': float(confidence)
         })
+        all_confidences.append(confidence)
     
-    # Save results
+    # Save results as JSON
     with open(config.output_path, 'w') as f:
         json.dump(results, f, indent=2)
     
+    # Also save as CSV for submission
+    results_df = pd.DataFrame({
+        'image_path': [r['path'] for r in results],
+        'anatomical_region': [r['anatomical_region'] for r in results]
+    })
+    results_df.to_csv('submission.csv', index=False)
+    
     print(f'\n✓ Predictions saved to {config.output_path}')
+    print(f'✓ Submission CSV saved to submission.csv')
     
     # Print statistics
     pred_counts = Counter([r['anatomical_region'] for r in results])
@@ -223,8 +248,16 @@ def inference():
     for class_name, count in sorted(pred_counts.items()):
         print(f'  {class_name}: {count}')
     
-    avg_confidence = np.mean([r['confidence'] for r in results])
-    print(f'\nAverage confidence: {avg_confidence:.4f}')
+    avg_confidence = np.mean(all_confidences)
+    min_confidence = np.min(all_confidences)
+    max_confidence = np.max(all_confidences)
+    low_confidence_count = sum(1 for c in all_confidences if c < 0.8)
+    
+    print(f'\nConfidence statistics:')
+    print(f'  Average: {avg_confidence:.4f}')
+    print(f'  Min: {min_confidence:.4f}')
+    print(f'  Max: {max_confidence:.4f}')
+    print(f'  Low confidence (<0.8): {low_confidence_count} samples')
 
 if __name__ == '__main__':
     inference()
