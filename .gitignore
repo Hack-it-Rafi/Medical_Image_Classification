@@ -28,7 +28,7 @@ submission*.csv
 
 # Jupyter Notebook
 .ipynb_checkpoints
-*.ipynb
+# *.ipynb
 
 # IDE
 .vscode/

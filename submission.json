@@ -1,0 +1,3398 @@
+[
+  {
+    "path": "17089462_231004112419923831_954_image05.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.8641869425773621,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "17090495_230727104701590831_954_image04.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.4867372512817383,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "17090495_230727104701590831_954_image05.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.824541449546814,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "17092118_231121081438130831_954_image01.png",
+    "anatomical_region": "ear-left",
+    "confidence": 0.8740924596786499,
+    "ground_truth": "ear-left"
+  },
+  {
+    "path": "17092946_230330075548499831_954_image06.png",
+    "anatomical_region": "vc-closed",
+    "confidence": 0.8547692894935608,
+    "ground_truth": "vc-closed"
+  },
+  {
+    "path": "17092946_230330075548499831_954_image07.png",
+    "anatomical_region": "vc-closed",
+    "confidence": 0.9251927137374878,
+    "ground_truth": "vc-closed"
+  },
+  {
+    "path": "17093219_231208092055263831_954_image01.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.6214679479598999,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "17093219_231208092055263831_954_image03.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.6093283295631409,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "17093219_231208092055263831_954_image07.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.8602738976478577,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "17094044_231212085741536831_954_image04.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.8647608757019043,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "17094263_230714082721062831_954_image08.png",
+    "anatomical_region": "throat",
+    "confidence": 0.9585888385772705,
+    "ground_truth": "throat"
+  },
+  {
+    "path": "17095233_231107081405390831_954_image02.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.7681654691696167,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "17095516_230927105314719831_954_image04.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.654226541519165,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "17095516_230927105314719831_954_image05.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.8608736991882324,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "17096145_230817081318039831_954_image03.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.819118857383728,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "17097046_231208091356464831_954_image07.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.9121085405349731,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "17097046_231208091356464831_954_image08.png",
+    "anatomical_region": "vc-closed",
+    "confidence": 0.8784326910972595,
+    "ground_truth": "vc-closed"
+  },
+  {
+    "path": "17097111_230425080714509831_121_image05.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.7746992111206055,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "17097111_230822151204315831_121_image01.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.8347135782241821,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "17097111_230822151204315831_121_image03.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.7615483999252319,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "17097111_231004093806111831_954_image07.png",
+    "anatomical_region": "vc-closed",
+    "confidence": 0.895606279373169,
+    "ground_truth": "vc-closed"
+  },
+  {
+    "path": "17097111_231101102742409831_954_image05.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.6862116456031799,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "17097196_230808093845972831_954_image01.png",
+    "anatomical_region": "ear-right",
+    "confidence": 0.8649720549583435,
+    "ground_truth": "ear-right"
+  },
+  {
+    "path": "17097196_230808093845972831_954_image02.png",
+    "anatomical_region": "ear-left",
+    "confidence": 0.8378773927688599,
+    "ground_truth": "ear-left"
+  },
+  {
+    "path": "17097383_231124095029081831_121_image01.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.7903470396995544,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "17097383_231124095029081831_121_image03.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.6784604787826538,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "17097383_231124095029081831_121_image07.png",
+    "anatomical_region": "ear-right",
+    "confidence": 0.8534707427024841,
+    "ground_truth": "ear-right"
+  },
+  {
+    "path": "17097561_230921074417169831_949_image02.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.5803562998771667,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "17097561_230921074417169831_949_image03.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.722551703453064,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "17097561_230921074417169831_949_image04.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.5296424627304077,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "17097561_230921074417169831_949_image05.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.8130509257316589,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "17097561_230921074417169831_949_image06.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.7378838062286377,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "17097561_230921074417169831_949_image07.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.8416433930397034,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "17097561_231107095542012831_954_image01.png",
+    "anatomical_region": "ear-right",
+    "confidence": 0.9198787808418274,
+    "ground_truth": "ear-right"
+  },
+  {
+    "path": "17097561_231107095542012831_954_image06.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.44768208265304565,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "17097561_231107095542012831_954_image07.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.8628036379814148,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "17097561_231208093759106831_954_image04.png",
+    "anatomical_region": "ear-right",
+    "confidence": 0.8601652979850769,
+    "ground_truth": "ear-right"
+  },
+  {
+    "path": "17097561_231208093759106831_954_image07.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.710754930973053,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "17098832_230522200647119831_121_image01.png",
+    "anatomical_region": "ear-right",
+    "confidence": 0.6748714447021484,
+    "ground_truth": "ear-right"
+  },
+  {
+    "path": "17098832_230522200647119831_121_image02.png",
+    "anatomical_region": "ear-right",
+    "confidence": 0.8029418587684631,
+    "ground_truth": "ear-right"
+  },
+  {
+    "path": "17098832_230522200647119831_121_image04.png",
+    "anatomical_region": "ear-right",
+    "confidence": 0.7760835289955139,
+    "ground_truth": "ear-right"
+  },
+  {
+    "path": "17099724_231207091636363831_954_image05.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.72266685962677,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "17100170_230523141152109831_954_image01.png",
+    "anatomical_region": "throat",
+    "confidence": 0.9408959746360779,
+    "ground_truth": "throat"
+  },
+  {
+    "path": "17100188_231027092538627831_121_image05.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.8396681547164917,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "17100188_231027092538627831_121_image06.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.8380650281906128,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "17101474_231023082940450831_954_image08.png",
+    "anatomical_region": "vc-closed",
+    "confidence": 0.895512044429779,
+    "ground_truth": "vc-closed"
+  },
+  {
+    "path": "17101474_231023082940450831_954_image09.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.9176594018936157,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "17101729_231208100911363831_954_image02.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.7908380627632141,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "17101729_231208100911363831_954_image03.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.7698096632957458,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "17101729_231208100911363831_954_image04.png",
+    "anatomical_region": "throat",
+    "confidence": 0.9572754502296448,
+    "ground_truth": "throat"
+  },
+  {
+    "path": "17102052_230922081743225831_954_image01.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.6263551712036133,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "17102052_230922081743225831_954_image02.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.8339078426361084,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "17102052_230922081743225831_954_image04.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.5753275156021118,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "17103250_231221093431827831_954_image02.png",
+    "anatomical_region": "ear-right",
+    "confidence": 0.6976290345191956,
+    "ground_truth": "ear-right"
+  },
+  {
+    "path": "17103250_231221093431827831_954_image03.png",
+    "anatomical_region": "ear-left",
+    "confidence": 0.9379211664199829,
+    "ground_truth": "ear-left"
+  },
+  {
+    "path": "17103250_231221093431827831_954_image04.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.6964213848114014,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "17103250_231221093431827831_954_image06.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.4947280287742615,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "17103328_230608080153879831_949_image01.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.5011002421379089,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "17103328_230608080153879831_949_image04.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.7112334370613098,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "17103328_230608080153879831_949_image05.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.8008713722229004,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "17103328_230608080153879831_949_image06.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.6854640245437622,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "17103375_231229120934669831_121_image01.png",
+    "anatomical_region": "ear-right",
+    "confidence": 0.8112733364105225,
+    "ground_truth": "ear-right"
+  },
+  {
+    "path": "17103375_231229120934669831_121_image02.png",
+    "anatomical_region": "ear-left",
+    "confidence": 0.8730375170707703,
+    "ground_truth": "ear-left"
+  },
+  {
+    "path": "17103375_231229120934669831_121_image03.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.7277364730834961,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "17103375_231229120934669831_121_image04.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.4450960159301758,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "17103375_231229120934669831_121_image06.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.7777320146560669,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "17103655_230908085159439831_954_image04.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.8601490259170532,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "17103788_231227150326134831_954_image05.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.5013845562934875,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "17103788_231227150326134831_954_image08.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.8730183243751526,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "17104182_231109101101164831_954_image01.png",
+    "anatomical_region": "vc-closed",
+    "confidence": 0.9289785027503967,
+    "ground_truth": "vc-closed"
+  },
+  {
+    "path": "17104182_231109101101164831_954_image03.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.8363714218139648,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "17105545_230928084836926831_121_image04.png",
+    "anatomical_region": "ear-left",
+    "confidence": 0.9051198959350586,
+    "ground_truth": "ear-left"
+  },
+  {
+    "path": "19010116_231019085645499831_954_image05.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.6896073818206787,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "19010116_231019085645499831_954_image09.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.8971008658409119,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "19010641_230519110027516831_954_image01.png",
+    "anatomical_region": "vc-closed",
+    "confidence": 0.9225844144821167,
+    "ground_truth": "vc-closed"
+  },
+  {
+    "path": "19010641_230519110027516831_954_image03.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.9132938981056213,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "19010762_230626101458296831_121_image04.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.327021062374115,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "19010762_230626101458296831_121_image06.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.5695036053657532,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "19010762_230626101458296831_121_image07.png",
+    "anatomical_region": "throat",
+    "confidence": 0.8852750658988953,
+    "ground_truth": "throat"
+  },
+  {
+    "path": "19010762_231025091014395831_954_image05.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.7309426665306091,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "19010762_231025091014395831_954_image06.png",
+    "anatomical_region": "vc-closed",
+    "confidence": 0.9112274050712585,
+    "ground_truth": "vc-closed"
+  },
+  {
+    "path": "19010762_231025091014395831_954_image07.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.8952105641365051,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "19010827_230718092327222831_954_image04.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.7874261140823364,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "19010827_230720093838338831_954_image04.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.3300098180770874,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "19010827_230720093838338831_954_image05.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.5593275427818298,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "19010827_230720093838338831_954_image06.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.7557838559150696,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "19010827_230720093838338831_954_image07.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.7480003833770752,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "19010940_230929141319288831_121_image01.png",
+    "anatomical_region": "ear-right",
+    "confidence": 0.8438792824745178,
+    "ground_truth": "ear-right"
+  },
+  {
+    "path": "19010940_230929141319288831_121_image02.png",
+    "anatomical_region": "ear-left",
+    "confidence": 0.7990856766700745,
+    "ground_truth": "ear-left"
+  },
+  {
+    "path": "19010940_230929141319288831_121_image03.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.49885547161102295,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "19010940_230929141319288831_121_image06.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.42684584856033325,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "19011099_231114101655268831_954_image01.png",
+    "anatomical_region": "ear-right",
+    "confidence": 0.9060341119766235,
+    "ground_truth": "ear-right"
+  },
+  {
+    "path": "19011418_231221110452473831_954_image02.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.8425418138504028,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "19011685_231003082551039831_954_image03.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.7766454815864563,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "19011685_231003082551039831_954_image04.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.7304257154464722,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "19011685_231003082551039831_954_image05.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.7971004843711853,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "19011685_231006094617286831_954_image04.png",
+    "anatomical_region": "vc-closed",
+    "confidence": 0.9106379747390747,
+    "ground_truth": "vc-closed"
+  },
+  {
+    "path": "19011685_231006094617286831_954_image05.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.91160649061203,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "19012499_230908090243540831_954_image03.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.8598268628120422,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "19012499_230908090243540831_954_image04.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.8932132720947266,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "19014832_230801103515635831_954_image01.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.6578415036201477,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "19014832_230801103515635831_954_image03.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.8593902587890625,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "19015016_231117145701906831_954_image01.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.7204808592796326,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "19015016_231117145701906831_954_image04.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.6878514289855957,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "19015673_230517101136435831_121_image01.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.799370288848877,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "19015673_230517101136435831_121_image02.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.7395607233047485,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "19015673_230517101136435831_121_image03.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.5615400671958923,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "19015673_230517101136435831_121_image04.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.7951404452323914,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "19015673_230517101136435831_121_image06.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.7330099940299988,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "19017038_231010150720248831_954_image02.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.7008964419364929,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "19017038_231010150720248831_954_image03.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.5235047936439514,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "19017038_231010150720248831_954_image06.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.6027997732162476,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "19017038_231010150720248831_954_image07.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.768762469291687,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "19018485_230526093745892831_954_image02.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.7335315346717834,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "19018485_230609081358914831_121_image01.png",
+    "anatomical_region": "ear-right",
+    "confidence": 0.8875629901885986,
+    "ground_truth": "ear-right"
+  },
+  {
+    "path": "19071292_231226082111448831_954_image02.png",
+    "anatomical_region": "ear-left",
+    "confidence": 0.9034942388534546,
+    "ground_truth": "ear-left"
+  },
+  {
+    "path": "19071292_231226082111448831_954_image05.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.7123093605041504,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "19074994_230403111035975831_949_image01.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.723698079586029,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "19075733_230616085932960831_121_image01.png",
+    "anatomical_region": "ear-right",
+    "confidence": 0.9219870567321777,
+    "ground_truth": "ear-right"
+  },
+  {
+    "path": "19075733_230616085932960831_121_image03.png",
+    "anatomical_region": "ear-right",
+    "confidence": 0.533850371837616,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "19075733_230616085932960831_121_image05.png",
+    "anatomical_region": "ear-left",
+    "confidence": 0.8077887296676636,
+    "ground_truth": "ear-left"
+  },
+  {
+    "path": "19076970_231207092848905831_121_image02.png",
+    "anatomical_region": "ear-right",
+    "confidence": 0.9014790654182434,
+    "ground_truth": "ear-right"
+  },
+  {
+    "path": "19076970_231207092848905831_121_image03.png",
+    "anatomical_region": "ear-left",
+    "confidence": 0.3355458080768585,
+    "ground_truth": "ear-left"
+  },
+  {
+    "path": "19076970_231207092848905831_121_image04.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.7287988066673279,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "19076970_231207092848905831_121_image08.png",
+    "anatomical_region": "throat",
+    "confidence": 0.9649634957313538,
+    "ground_truth": "throat"
+  },
+  {
+    "path": "19077627_231010082550715831_954_image03.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.8273561000823975,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "19077627_231010082550715831_954_image05.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.8433991074562073,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "19077900_231215142901053831_954_image01.png",
+    "anatomical_region": "ear-right",
+    "confidence": 0.6906830668449402,
+    "ground_truth": "ear-right"
+  },
+  {
+    "path": "19077900_231215142901053831_954_image02.png",
+    "anatomical_region": "ear-left",
+    "confidence": 0.9146596193313599,
+    "ground_truth": "ear-left"
+  },
+  {
+    "path": "19077900_231215142901053831_954_image04.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.7589027881622314,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "19077900_231215142901053831_954_image08.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.8991824388504028,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "19079363_230907102622799831_954_image01.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.6753538846969604,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "19079363_230907102622799831_954_image03.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.65288907289505,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "19079363_230907102622799831_954_image05.png",
+    "anatomical_region": "vc-closed",
+    "confidence": 0.9120285511016846,
+    "ground_truth": "vc-closed"
+  },
+  {
+    "path": "19079363_230907102622799831_954_image06.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.8809751868247986,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "19080387_231121092111319831_954_image02.png",
+    "anatomical_region": "ear-left",
+    "confidence": 0.8479372262954712,
+    "ground_truth": "ear-left"
+  },
+  {
+    "path": "19080512_230605093902829831_954_image01.png",
+    "anatomical_region": "ear-right",
+    "confidence": 0.9230045080184937,
+    "ground_truth": "ear-right"
+  },
+  {
+    "path": "19080512_230605093902829831_954_image03.png",
+    "anatomical_region": "ear-left",
+    "confidence": 0.5987716317176819,
+    "ground_truth": "ear-left"
+  },
+  {
+    "path": "19082079_230523135218556831_949_image01.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.7993893623352051,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "19082079_230523135218556831_949_image02.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.7059051990509033,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "19082079_230523135218556831_949_image03.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.4138026833534241,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "19082461_230928100729422831_954_image04.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.6981242895126343,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "19082461_231011101231274831_954_image07.png",
+    "anatomical_region": "vc-closed",
+    "confidence": 0.9044082164764404,
+    "ground_truth": "vc-closed"
+  },
+  {
+    "path": "19082569_230801083935154831_954_image04.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.771245002746582,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "19082569_230801083935154831_954_image05.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.693078875541687,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "19084179_230810095238653831_954_image04.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.7668589949607849,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "19085102_230905135518413831_954_image05.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.8606282472610474,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "19086309_231011144424243831_954_image04.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.8639520406723022,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "19086309_231016100604195831_121_image02.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.8406215310096741,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "19086309_231016100604195831_121_image05.png",
+    "anatomical_region": "ear-left",
+    "confidence": 0.3756445646286011,
+    "ground_truth": "ear-right"
+  },
+  {
+    "path": "19086309_231023093006012831_954_image07.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.7310138940811157,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "19086309_231023093006012831_954_image08.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.6043423414230347,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "19086380_231206093946060831_954_image08.png",
+    "anatomical_region": "vc-closed",
+    "confidence": 0.7748819589614868,
+    "ground_truth": "vc-closed"
+  },
+  {
+    "path": "19086380_231206093946060831_954_image11.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.9114205837249756,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "19086567_230919081946891831_954_image04.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.7588334679603577,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "19086567_230919081946891831_954_image06.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.7444714903831482,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "19086642_231004083703418831_954_image03.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.44076088070869446,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "19090302_230914083637527831_954_image02.png",
+    "anatomical_region": "ear-left",
+    "confidence": 0.9391418099403381,
+    "ground_truth": "ear-left"
+  },
+  {
+    "path": "19090812_231229090550594831_954_image01.png",
+    "anatomical_region": "ear-right",
+    "confidence": 0.7491331100463867,
+    "ground_truth": "ear-right"
+  },
+  {
+    "path": "19090812_231229090550594831_954_image02.png",
+    "anatomical_region": "ear-left",
+    "confidence": 0.7471737265586853,
+    "ground_truth": "ear-left"
+  },
+  {
+    "path": "19090812_231229090550594831_954_image06.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.8672394752502441,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "19091014_231219095603849831_954_image02.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.6787638664245605,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "19092078_231114082917105831_954_image04.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.4177618622779846,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "19092099_231120095539387831_954_image03.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.5080482959747314,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "19092644_231214075644208831_954_image03.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.7012634873390198,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "22117472_231123095255631831_954_image03.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.708573043346405,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "22117472_231123095255631831_954_image04.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.8104977011680603,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "22121665_230927100526824831_121_image05.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.8576409220695496,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "22121665_230927100526824831_121_image06.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.780206024646759,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "22128068_230816153636135831_954_image05.png",
+    "anatomical_region": "ear-right",
+    "confidence": 0.8212084770202637,
+    "ground_truth": "ear-right"
+  },
+  {
+    "path": "22129652_230515111841005831_954_image05.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.7846274375915527,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "22135185_230807110142441831_954_image05.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.4876517355442047,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "22135759_230328092140992831_121_image03.png",
+    "anatomical_region": "ear-right",
+    "confidence": 0.8475210070610046,
+    "ground_truth": "ear-right"
+  },
+  {
+    "path": "22135760_230328074205309831_121_image02.png",
+    "anatomical_region": "ear-right",
+    "confidence": 0.7202650904655457,
+    "ground_truth": "ear-right"
+  },
+  {
+    "path": "22136981_230327100451922831_121_image09.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.9098553657531738,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "22137217_230327091629911831_121_image01.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.8325091004371643,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "22145064_230821081327548831_954_image05.png",
+    "anatomical_region": "ear-left",
+    "confidence": 0.9459438323974609,
+    "ground_truth": "ear-left"
+  },
+  {
+    "path": "22145064_230821081327548831_954_image08.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.7621678113937378,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "22145864_230817155443096831_954_image01.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.8344771265983582,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "22147573_231228111857416831_954_image02.png",
+    "anatomical_region": "ear-left",
+    "confidence": 0.9174977540969849,
+    "ground_truth": "ear-left"
+  },
+  {
+    "path": "22147816_231006095156735831_954_image02.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.5840260982513428,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "22147816_231006095156735831_954_image04.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.7839675545692444,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "22148095_230329083626022831_121_image05.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.6807172298431396,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "23109714_231114101029933831_949_image05.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.7312548756599426,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "23110452_230822091603718831_949_image01.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.5535498261451721,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "23110452_230822091603718831_949_image03.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.5092442035675049,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "23110457_231027084053818831_954_image01.png",
+    "anatomical_region": "ear-right",
+    "confidence": 0.6920025944709778,
+    "ground_truth": "ear-right"
+  },
+  {
+    "path": "23110457_231027084053818831_954_image04.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.7611436247825623,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "23110457_231027084053818831_954_image05.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.30350932478904724,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "23110457_231027084053818831_954_image08.png",
+    "anatomical_region": "vc-closed",
+    "confidence": 0.8033201694488525,
+    "ground_truth": "vc-closed"
+  },
+  {
+    "path": "23110457_231027084053818831_954_image09.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.906556248664856,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "23110663_231110142111262831_121_image06.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.7814773917198181,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "23110663_231110142111262831_121_image07.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.846358060836792,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "23112123_230602092604855831_954_image01.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.615882158279419,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "23113662_230518085607793831_949_image05.png",
+    "anatomical_region": "throat",
+    "confidence": 0.485775887966156,
+    "ground_truth": "throat"
+  },
+  {
+    "path": "23113749_231031083607161831_954_image01.png",
+    "anatomical_region": "ear-right",
+    "confidence": 0.9015511274337769,
+    "ground_truth": "ear-right"
+  },
+  {
+    "path": "23113749_231031083607161831_954_image02.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.6263828277587891,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "23113749_231031083607161831_954_image04.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.8322023749351501,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "23113749_231031083607161831_954_image05.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.789897620677948,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "23114586_230519105217792831_954_image02.png",
+    "anatomical_region": "ear-left",
+    "confidence": 0.8634599447250366,
+    "ground_truth": "ear-left"
+  },
+  {
+    "path": "23114606_230801100030444831_954_image03.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.6891124248504639,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "23114619_231219083530808831_954_image01.png",
+    "anatomical_region": "ear-right",
+    "confidence": 0.8280655741691589,
+    "ground_truth": "ear-right"
+  },
+  {
+    "path": "23114619_231219083530808831_954_image11.png",
+    "anatomical_region": "throat",
+    "confidence": 0.9400067329406738,
+    "ground_truth": "throat"
+  },
+  {
+    "path": "23114708_230519104404520831_954_image01.png",
+    "anatomical_region": "vc-closed",
+    "confidence": 0.9143349528312683,
+    "ground_truth": "vc-closed"
+  },
+  {
+    "path": "23114708_230519104404520831_954_image02.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.893698513507843,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "23114989_230526101312998831_954_image01.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.6285138130187988,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "23115224_230606084120346831_121_image01.png",
+    "anatomical_region": "ear-left",
+    "confidence": 0.8839380741119385,
+    "ground_truth": "ear-left"
+  },
+  {
+    "path": "23115224_230606084120346831_121_image02.png",
+    "anatomical_region": "ear-right",
+    "confidence": 0.6890247464179993,
+    "ground_truth": "ear-right"
+  },
+  {
+    "path": "23115224_230606084120346831_121_image05.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.769120991230011,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "23115611_230520152842361831_121_image03.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.658927857875824,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "23115611_230520152842361831_121_image05.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.5746188163757324,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "23115611_230520152842361831_121_image07.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.8478045463562012,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "23115692_231120081352634831_954_image06.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.9040841460227966,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "23115698_231016103419851831_954_image05.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.8750467896461487,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "23115698_231016103419851831_954_image07.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.6570061445236206,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "23115775_230522074317232831_949_image02.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.7280980348587036,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "23115775_230522074317232831_949_image05.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.6844097971916199,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "23165160_230927101920431831_954_image03.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.8159810304641724,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "23165423_230717150013817831_949_image04.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.6341974139213562,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "23165423_230717150013817831_949_image05.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.5682966709136963,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "23165977_230915075557923831_954_image03.png",
+    "anatomical_region": "vc-closed",
+    "confidence": 0.9180650115013123,
+    "ground_truth": "vc-closed"
+  },
+  {
+    "path": "23165977_230915075557923831_954_image04.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.8352627754211426,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "23907323_231218101813158831_954_image03.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.8091637492179871,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "23907323_231218101813158831_954_image04.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.588629961013794,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "15004709_231206082905713831_954_image03.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.7638446688652039,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "15004709_231206082905713831_954_image06.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.8924777507781982,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "15004709_231206082905713831_954_image07.png",
+    "anatomical_region": "vc-closed",
+    "confidence": 0.8990617990493774,
+    "ground_truth": "vc-closed"
+  },
+  {
+    "path": "15004709_231206082905713831_954_image08.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.9278420209884644,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "15005172_230913080858365831_954_image03.png",
+    "anatomical_region": "vc-closed",
+    "confidence": 0.9315654039382935,
+    "ground_truth": "vc-closed"
+  },
+  {
+    "path": "15005172_231121083530463831_954_image02.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.841393232345581,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "15005172_231121083530463831_954_image08.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.8616948127746582,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "15005513_231030084038267831_121_image01.png",
+    "anatomical_region": "ear-right",
+    "confidence": 0.7358620166778564,
+    "ground_truth": "ear-right"
+  },
+  {
+    "path": "15005513_231030084038267831_121_image04.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.6975027322769165,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "15005848_230714150145303831_954_image04.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.9026248455047607,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "15005876_230920100349907831_954_image01.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.46344754099845886,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "15005876_230920100349907831_954_image02.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.6831898093223572,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "15005876_230920100349907831_954_image03.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.4671938419342041,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "15006335_230821080455237831_954_image06.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.8014892339706421,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "15006335_231012101523913831_954_image02.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.7511520981788635,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "15006335_231012101523913831_954_image04.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.7487147450447083,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "15006723_230808105100692831_954_image01.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.8016566634178162,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "15006723_230808105100692831_954_image03.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.7666656970977783,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "15006723_230808105100692831_954_image05.png",
+    "anatomical_region": "vc-closed",
+    "confidence": 0.9215803146362305,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "15006723_230808105100692831_954_image06.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.9091400504112244,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "15007558_231120082017735831_954_image06.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.8878566026687622,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "15007558_231120082017735831_954_image07.png",
+    "anatomical_region": "vc-closed",
+    "confidence": 0.9143757820129395,
+    "ground_truth": "vc-closed"
+  },
+  {
+    "path": "15008623_231016105506914831_954_image03.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.8706188797950745,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "15008623_231016105506914831_954_image05.png",
+    "anatomical_region": "ear-left",
+    "confidence": 0.9343975186347961,
+    "ground_truth": "ear-left"
+  },
+  {
+    "path": "15008623_231016105506914831_954_image06.png",
+    "anatomical_region": "vc-closed",
+    "confidence": 0.8943167328834534,
+    "ground_truth": "vc-closed"
+  },
+  {
+    "path": "15008623_231016105506914831_954_image07.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.8562805652618408,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "15009138_230605085238215831_121_image02.png",
+    "anatomical_region": "ear-left",
+    "confidence": 0.8305808305740356,
+    "ground_truth": "ear-left"
+  },
+  {
+    "path": "15009138_230605085238215831_121_image05.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.8675610423088074,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "15012315_230420150011069831_954_image01.png",
+    "anatomical_region": "throat",
+    "confidence": 0.8871846199035645,
+    "ground_truth": "throat"
+  },
+  {
+    "path": "15012315_230420150011069831_954_image02.png",
+    "anatomical_region": "vc-closed",
+    "confidence": 0.6907469034194946,
+    "ground_truth": "vc-closed"
+  },
+  {
+    "path": "15012936_231127084401243831_954_image02.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.9229754209518433,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "15013084_230815094814873831_954_image05.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.7730705142021179,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "15013084_230815094814873831_954_image08.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.8615734577178955,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "15013334_230510083120812831_121_image05.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.6748788952827454,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "15013764_230724090938735831_954_image02.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.8906949758529663,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "15014737_230719082619092831_121_image02.png",
+    "anatomical_region": "ear-left",
+    "confidence": 0.737755298614502,
+    "ground_truth": "ear-left"
+  },
+  {
+    "path": "15014737_230719082619092831_121_image03.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.8462391495704651,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "15014737_230719082619092831_121_image04.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.5584068298339844,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "15015014_230919085639983831_954_image02.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.603280246257782,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "15015871_231026093628050831_954_image05.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.7910034656524658,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "15017069_231113135410294831_121_image04.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.8116743564605713,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "15017255_231107104450948831_954_image05.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.7776016592979431,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "15017797_231004095125295831_954_image06.png",
+    "anatomical_region": "vc-closed",
+    "confidence": 0.9393513202667236,
+    "ground_truth": "vc-closed"
+  },
+  {
+    "path": "15018523_230407153309150831_949_image04.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.8627878427505493,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "15019955_230424082814262831_121_image03.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.5967051386833191,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "15019955_230828091846590831_121_image06.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.8092080354690552,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "15021750_230911081058706831_954_image02.png",
+    "anatomical_region": "ear-left",
+    "confidence": 0.8547825217247009,
+    "ground_truth": "ear-left"
+  },
+  {
+    "path": "15021750_230911081058706831_954_image05.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.8336830735206604,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "15022069_230407101018142831_949_image03.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.6460709571838379,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "15022069_230512095000403831_121_image02.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.7952563166618347,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "15022069_230512095000403831_121_image03.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.45121458172798157,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "15023443_230512081019139831_954_image02.png",
+    "anatomical_region": "vc-closed",
+    "confidence": 0.7635945081710815,
+    "ground_truth": "vc-closed"
+  },
+  {
+    "path": "15023796_231205083901701831_954_image05.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.5392084121704102,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "15023799_230922085220867831_121_image06.png",
+    "anatomical_region": "ear-left",
+    "confidence": 0.8840161561965942,
+    "ground_truth": "ear-left"
+  },
+  {
+    "path": "15023886_230828083920833831_121_image02.png",
+    "anatomical_region": "ear-right",
+    "confidence": 0.7885868549346924,
+    "ground_truth": "ear-right"
+  },
+  {
+    "path": "15023886_230828083920833831_121_image05.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.766380786895752,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "15023994_230926083959783831_954_image03.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.6108872890472412,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "15023994_230926083959783831_954_image05.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.8812326788902283,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "22043263_230620084759579831_121_image05.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.5790030360221863,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "22043263_230620084759579831_121_image06.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.7173104286193848,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "22043806_231018102225814831_954_image02.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.6630206108093262,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "22050697_230911080449142831_954_image02.png",
+    "anatomical_region": "ear-left",
+    "confidence": 0.44802871346473694,
+    "ground_truth": "ear-left"
+  },
+  {
+    "path": "22050740_231207101837027831_949_image02.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.5420677065849304,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "22050740_231207101837027831_949_image06.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.8231943845748901,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "22051991_231101105007620831_954_image02.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.8417762517929077,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "22051991_231101105007620831_954_image03.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.7782464027404785,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "22062598_231212082119769831_954_image03.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.514493465423584,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "22062598_231212082119769831_954_image05.png",
+    "anatomical_region": "throat",
+    "confidence": 0.9418685436248779,
+    "ground_truth": "throat"
+  },
+  {
+    "path": "22062598_231212082119769831_954_image06.png",
+    "anatomical_region": "vc-closed",
+    "confidence": 0.7902686595916748,
+    "ground_truth": "vc-closed"
+  },
+  {
+    "path": "22062598_231212082119769831_954_image07.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.910744309425354,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "22069256_231228083314949831_954_image05.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.8874284625053406,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "22069859_231012094133633831_954_image01.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.8693572282791138,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "22069859_231012094133633831_954_image03.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.9056739807128906,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "22070648_230804095009268831_954_image08.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.5972898602485657,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "22071194_230918104225612831_954_image04.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.8206307888031006,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "22072710_231207083826860831_121_image03.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.7995821237564087,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "22073014_230926102605550831_954_image02.png",
+    "anatomical_region": "ear-left",
+    "confidence": 0.9179604053497314,
+    "ground_truth": "ear-left"
+  },
+  {
+    "path": "22073709_230722202854055831_954_image06.png",
+    "anatomical_region": "vc-closed",
+    "confidence": 0.9217278957366943,
+    "ground_truth": "vc-closed"
+  },
+  {
+    "path": "22075669_231212100218967831_954_image04.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.47964417934417725,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "22076101_230810112503877831_954_image03.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.5982844233512878,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "22079003_230912104446252831_954_image06.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.4024858772754669,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "22080705_230530105122327831_954_image01.png",
+    "anatomical_region": "vc-closed",
+    "confidence": 0.91903156042099,
+    "ground_truth": "vc-closed"
+  },
+  {
+    "path": "22080705_230530105122327831_954_image02.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.9103847742080688,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "22080705_230530105122327831_954_image03.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.8769182562828064,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "22080705_230530105122327831_954_image04.png",
+    "anatomical_region": "vc-closed",
+    "confidence": 0.46516722440719604,
+    "ground_truth": "vc-closed"
+  },
+  {
+    "path": "22080866_231205083537045831_954_image04.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.7321720123291016,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "22088197_230725104158413831_954_image04.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.8603313565254211,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "22090553_230925093341512831_121_image04.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.8457545638084412,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "22094616_231005100642099831_949_image02.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.5937939882278442,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "22098600_231228110038550831_121_image05.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.5411389470100403,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "22098600_231228110038550831_121_image06.png",
+    "anatomical_region": "throat",
+    "confidence": 0.9574454426765442,
+    "ground_truth": "throat"
+  },
+  {
+    "path": "22099094_230822104055146831_121_image05.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.8283829689025879,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "22099094_230822104055146831_121_image06.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.7899854779243469,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "22105516_230926103043484831_954_image05.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.7173206210136414,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "22106607_231101083348296831_121_image02.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.8063969612121582,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "23144375_230622085729593831_121_image04.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.8503351807594299,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "23144375_230622085729593831_121_image05.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.7017916440963745,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "23144482_231013104805185831_954_image06.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.8592767119407654,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "23145133_230623100317915831_954_image04.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.8422514796257019,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "23145157_231009092953020831_121_image02.png",
+    "anatomical_region": "ear-left",
+    "confidence": 0.8644275069236755,
+    "ground_truth": "ear-left"
+  },
+  {
+    "path": "23145157_231009092953020831_121_image06.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.6846102476119995,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "23145424_230623105638788831_121_image06.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.5921961069107056,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "23145490_231024151106677831_954_image05.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.5729998350143433,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "23146949_230624143545369831_949_image01.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.7477244138717651,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "23146949_230624143545369831_949_image04.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.85965496301651,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "23146955_230624145953203831_954_image04.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.8831819295883179,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "23146990_230905092441106831_954_image03.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.6943922638893127,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "23146990_230905092441106831_954_image04.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.8510645627975464,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "23146990_230905092441106831_954_image06.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.8599532246589661,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "23147279_230630142751852831_954_image01.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.7481502294540405,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "23147388_230626103720158831_121_image03.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.8394225835800171,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "23147412_231218104909684831_954_image07.png",
+    "anatomical_region": "vc-closed",
+    "confidence": 0.9318550825119019,
+    "ground_truth": "vc-closed"
+  },
+  {
+    "path": "23147896_231019150101629831_954_image02.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.8992766737937927,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "23147933_230920134915850831_121_image01.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.7764816284179688,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "23147933_231005081916255831_121_image06.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.6274577975273132,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "23148063_230817153842368831_121_image01.png",
+    "anatomical_region": "ear-right",
+    "confidence": 0.8006752133369446,
+    "ground_truth": "ear-right"
+  },
+  {
+    "path": "23148299_230627093148268831_121_image07.png",
+    "anatomical_region": "throat",
+    "confidence": 0.9637303948402405,
+    "ground_truth": "throat"
+  },
+  {
+    "path": "23148386_230627091349211831_121_image05.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.7893660068511963,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "23148386_230627091349211831_121_image06.png",
+    "anatomical_region": "throat",
+    "confidence": 0.6780028343200684,
+    "ground_truth": "throat"
+  },
+  {
+    "path": "23148604_230807100242223831_954_image08.png",
+    "anatomical_region": "ear-right",
+    "confidence": 0.9120734930038452,
+    "ground_truth": "ear-right"
+  },
+  {
+    "path": "23148776_230703104700066831_121_image02.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.8718810081481934,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "23148776_230703104700066831_121_image05.png",
+    "anatomical_region": "ear-right",
+    "confidence": 0.9069952964782715,
+    "ground_truth": "ear-right"
+  },
+  {
+    "path": "23148776_230703104700066831_121_image06.png",
+    "anatomical_region": "ear-left",
+    "confidence": 0.43729063868522644,
+    "ground_truth": "ear-left"
+  },
+  {
+    "path": "23149901_230718075102304831_954_image01.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.6682466268539429,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "23150555_230629082221499831_948_image02.png",
+    "anatomical_region": "ear-left",
+    "confidence": 0.7910881042480469,
+    "ground_truth": "ear-left"
+  },
+  {
+    "path": "23150555_230629082221499831_948_image03.png",
+    "anatomical_region": "ear-left",
+    "confidence": 0.8668525218963623,
+    "ground_truth": "ear-left"
+  },
+  {
+    "path": "23150983_230804112416157831_954_image04.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.5535832643508911,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "23151136_230707142426469831_954_image03.png",
+    "anatomical_region": "vc-closed",
+    "confidence": 0.9305521249771118,
+    "ground_truth": "vc-closed"
+  },
+  {
+    "path": "23151136_230707142426469831_954_image04.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.9135298132896423,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "23921185_230612133810145831_954_image07.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.8836765885353088,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "23921386_230613203524031831_954_image02.png",
+    "anatomical_region": "throat",
+    "confidence": 0.8622816205024719,
+    "ground_truth": "throat"
+  },
+  {
+    "path": "23922152_230626082633772831_121_image03.png",
+    "anatomical_region": "ear-left",
+    "confidence": 0.9307637810707092,
+    "ground_truth": "ear-left"
+  },
+  {
+    "path": "23922152_230626082633772831_121_image05.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.8484489917755127,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "23922365_230621170028752831_954_image02.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.8820626139640808,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "23922415_230626075146250831_954_image01.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.9069900512695312,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "23922415_230626075146250831_954_image02.png",
+    "anatomical_region": "vc-closed",
+    "confidence": 0.9183485507965088,
+    "ground_truth": "vc-closed"
+  },
+  {
+    "path": "23922415_230626075146250831_954_image03.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.8877506256103516,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "23922415_230626075146250831_954_image06.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.7564345598220825,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "23922415_230626075146250831_954_image07.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.8287929892539978,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "23922415_230626075146250831_954_image09.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.8499129414558411,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "23922498_230622214653118831_121_image01.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.7675462365150452,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "23922498_230622214653118831_121_image03.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.8294672966003418,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "23922498_230622214653118831_121_image04.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.6374501585960388,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "23922582_230623125717703831_948_image02.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.8144940137863159,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "23922643_230624031645128831_121_image03.png",
+    "anatomical_region": "ear-right",
+    "confidence": 0.811509370803833,
+    "ground_truth": "ear-right"
+  },
+  {
+    "path": "23922643_230802112304325831_948_image01.png",
+    "anatomical_region": "ear-left",
+    "confidence": 0.8775187134742737,
+    "ground_truth": "ear-left"
+  },
+  {
+    "path": "23922897_230626120154112831_121_image01.png",
+    "anatomical_region": "ear-right",
+    "confidence": 0.8314424157142639,
+    "ground_truth": "ear-right"
+  },
+  {
+    "path": "23923761_230703203759745831_954_image01.png",
+    "anatomical_region": "vc-closed",
+    "confidence": 0.908208966255188,
+    "ground_truth": "vc-closed"
+  },
+  {
+    "path": "23924800_230711214823287831_954_image02.png",
+    "anatomical_region": "vc-closed",
+    "confidence": 0.9170643091201782,
+    "ground_truth": "vc-closed"
+  },
+  {
+    "path": "23925027_230713225600420831_954_image02.png",
+    "anatomical_region": "throat",
+    "confidence": 0.9497052431106567,
+    "ground_truth": "throat"
+  },
+  {
+    "path": "23925158_230718104026034831_121_image01.png",
+    "anatomical_region": "ear-right",
+    "confidence": 0.8403359651565552,
+    "ground_truth": "ear-right"
+  },
+  {
+    "path": "23925158_230718104026034831_121_image02.png",
+    "anatomical_region": "ear-left",
+    "confidence": 0.9214404821395874,
+    "ground_truth": "ear-left"
+  },
+  {
+    "path": "23925463_231024085805648831_954_image05.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.846855640411377,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "23925463_231024085805648831_954_image06.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.8862771987915039,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "23926496_230726200459026831_954_image01.png",
+    "anatomical_region": "throat",
+    "confidence": 0.9113039970397949,
+    "ground_truth": "throat"
+  },
+  {
+    "path": "23926496_230726200459026831_954_image02.png",
+    "anatomical_region": "vc-closed",
+    "confidence": 0.9036670923233032,
+    "ground_truth": "vc-closed"
+  },
+  {
+    "path": "23926496_230726200459026831_954_image03.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.8358420729637146,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "23926891_230907103240262831_954_image03.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.6202123761177063,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "23927190_230802153109425831_954_image03.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.7900016903877258,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "23927207_231107100440440831_954_image08.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.6724060773849487,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "16143327_230627083942878831_954_image01.png",
+    "anatomical_region": "vc-closed",
+    "confidence": 0.904090166091919,
+    "ground_truth": "vc-closed"
+  },
+  {
+    "path": "16143327_230627083942878831_954_image02.png",
+    "anatomical_region": "throat",
+    "confidence": 0.9633721709251404,
+    "ground_truth": "throat"
+  },
+  {
+    "path": "16143409_230929153531794831_954_image04.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.8067550659179688,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "16144146_230815100248013831_954_image06.png",
+    "anatomical_region": "vc-closed",
+    "confidence": 0.8642396330833435,
+    "ground_truth": "vc-closed"
+  },
+  {
+    "path": "16144146_230815100248013831_954_image07.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.8870254158973694,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "16144875_230810112720108831_954_image04.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.5317276120185852,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "16144875_230810112720108831_954_image06.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.7670928239822388,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "16146013_231218083653875831_954_image04.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.6497114896774292,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "16146013_231218083653875831_954_image05.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.7127150297164917,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "16146146_230410085218629831_121_image01.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.7759751677513123,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "16146146_230410085218629831_121_image05.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.8344146609306335,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "16146547_230504155042251831_121_image05.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.8266335129737854,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "16147928_230817160214038831_121_image04.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.7905842065811157,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "16148134_231212081600575831_954_image01.png",
+    "anatomical_region": "ear-right",
+    "confidence": 0.8621264696121216,
+    "ground_truth": "ear-right"
+  },
+  {
+    "path": "16149162_230516082008275831_121_image04.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.7016376852989197,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "16149672_231010083238491831_121_image03.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.8513721227645874,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "16150712_231116104929033831_954_image01.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.9084564447402954,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "16150712_231116104929033831_954_image03.png",
+    "anatomical_region": "vc-closed",
+    "confidence": 0.8319171667098999,
+    "ground_truth": "vc-closed"
+  },
+  {
+    "path": "16151317_231114075859458831_954_image02.png",
+    "anatomical_region": "ear-left",
+    "confidence": 0.9365097284317017,
+    "ground_truth": "ear-left"
+  },
+  {
+    "path": "16151317_231114075859458831_954_image07.png",
+    "anatomical_region": "vc-closed",
+    "confidence": 0.9047759771347046,
+    "ground_truth": "vc-closed"
+  },
+  {
+    "path": "16151333_230814085615008831_121_image01.png",
+    "anatomical_region": "ear-right",
+    "confidence": 0.6597018241882324,
+    "ground_truth": "ear-right"
+  },
+  {
+    "path": "16151333_230814085615008831_121_image05.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.7329864501953125,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "16151534_230713092020564831_954_image03.png",
+    "anatomical_region": "vc-closed",
+    "confidence": 0.8219774961471558,
+    "ground_truth": "vc-closed"
+  },
+  {
+    "path": "16151534_230713092020564831_954_image04.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.911434531211853,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "16151534_230713092020564831_954_image07.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.8493240475654602,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "16151965_230707153111316831_954_image01.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.44530707597732544,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "16151965_230707153111316831_954_image04.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.32281169295310974,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "16152097_231117150631335831_954_image01.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.8467553853988647,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "16153916_230516094601170831_121_image02.png",
+    "anatomical_region": "ear-left",
+    "confidence": 0.8959950804710388,
+    "ground_truth": "ear-left"
+  },
+  {
+    "path": "16153916_230516094601170831_121_image04.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.541270911693573,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "16155173_231002081313153831_121_image03.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.5549741983413696,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "16155173_231002081313153831_121_image04.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.7582098841667175,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "20064902_230919090142300831_954_image05.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.8141549229621887,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "20064902_230919090142300831_954_image06.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.6161893606185913,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "20066822_230920083932327831_954_image03.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.7469714879989624,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "20066822_230920083932327831_954_image05.png",
+    "anatomical_region": "vc-closed",
+    "confidence": 0.6596531271934509,
+    "ground_truth": "vc-closed"
+  },
+  {
+    "path": "20067154_230607093358363831_954_image01.png",
+    "anatomical_region": "vc-closed",
+    "confidence": 0.7713820934295654,
+    "ground_truth": "vc-closed"
+  },
+  {
+    "path": "20067154_230607093358363831_954_image03.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.8723660707473755,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "20067277_230921093217991831_121_image02.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.7331869006156921,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "20069187_230418083403330831_121_image04.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.5985420942306519,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "20071315_230914090827079831_954_image04.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.4982720613479614,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "20071315_230914090827079831_954_image07.png",
+    "anatomical_region": "throat",
+    "confidence": 0.971473753452301,
+    "ground_truth": "throat"
+  },
+  {
+    "path": "20071749_231002085236567831_121_image07.png",
+    "anatomical_region": "vc-closed",
+    "confidence": 0.9038857221603394,
+    "ground_truth": "vc-closed"
+  },
+  {
+    "path": "20071749_231002085236567831_121_image08.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.8962199687957764,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "20072280_230615151513751831_954_image03.png",
+    "anatomical_region": "vc-closed",
+    "confidence": 0.9021749496459961,
+    "ground_truth": "vc-closed"
+  },
+  {
+    "path": "20072280_230615151513751831_954_image04.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.9000806212425232,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "20072671_230515082954398831_121_image02.png",
+    "anatomical_region": "ear-left",
+    "confidence": 0.919622540473938,
+    "ground_truth": "ear-left"
+  },
+  {
+    "path": "20072671_230515082954398831_121_image05.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.4926319122314453,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "20079258_230929084533150831_954_image01.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.5786644816398621,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "20079258_230929084533150831_954_image02.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.8123977184295654,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "20079258_230929084533150831_954_image05.png",
+    "anatomical_region": "vc-closed",
+    "confidence": 0.9210495352745056,
+    "ground_truth": "vc-closed"
+  },
+  {
+    "path": "20079258_230929084533150831_954_image07.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.7806684970855713,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "20079624_230906102248604831_121_image01.png",
+    "anatomical_region": "ear-left",
+    "confidence": 0.9311233162879944,
+    "ground_truth": "ear-left"
+  },
+  {
+    "path": "22041164_230829083212855831_954_image05.png",
+    "anatomical_region": "vc-closed",
+    "confidence": 0.8885847926139832,
+    "ground_truth": "vc-closed"
+  },
+  {
+    "path": "22043259_230621093343707831_121_image01.png",
+    "anatomical_region": "ear-right",
+    "confidence": 0.7321184277534485,
+    "ground_truth": "ear-right"
+  },
+  {
+    "path": "22043259_230621093343707831_121_image02.png",
+    "anatomical_region": "ear-left",
+    "confidence": 0.9142245054244995,
+    "ground_truth": "ear-left"
+  },
+  {
+    "path": "22043259_230621093343707831_121_image05.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.7823978662490845,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "22043259_230621093343707831_121_image07.png",
+    "anatomical_region": "vc-closed",
+    "confidence": 0.9341073632240295,
+    "ground_truth": "vc-closed"
+  },
+  {
+    "path": "22043259_230621093343707831_121_image08.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.8954795598983765,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "22107682_231012095632670831_954_image03.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.7307447195053101,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "22108515_230428101950352831_954_image02.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.874640166759491,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "22109700_230914081528019831_121_image02.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.6610584855079651,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "22109700_230914081528019831_121_image04.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.7568010091781616,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "22110218_231219085946529831_954_image05.png",
+    "anatomical_region": "ear-left",
+    "confidence": 0.9021868109703064,
+    "ground_truth": "ear-left"
+  },
+  {
+    "path": "22110218_231219085946529831_954_image06.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.8560006022453308,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "22110834_230407075645705831_121_image01.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.7640694975852966,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "22110834_230407075645705831_121_image02.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.8133863210678101,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "22110834_231027095013965831_121_image01.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.6661662459373474,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "22110868_231027103720276831_121_image01.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.5219863057136536,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "22110986_230407073620409831_121_image01.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.8471853733062744,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "22111049_230407072616505831_121_image02.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.6454205513000488,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "22111049_231027094212922831_121_image04.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.5968551635742188,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "22111085_230410093848009831_121_image01.png",
+    "anatomical_region": "ear-right",
+    "confidence": 0.7601398825645447,
+    "ground_truth": "ear-right"
+  },
+  {
+    "path": "22111085_230410093848009831_121_image02.png",
+    "anatomical_region": "ear-left",
+    "confidence": 0.8966010808944702,
+    "ground_truth": "ear-left"
+  },
+  {
+    "path": "22111085_230410093848009831_121_image03.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.6739722490310669,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "22111085_231027094801984831_121_image06.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.906390905380249,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "22111362_230424090545699831_954_image02.png",
+    "anatomical_region": "ear-left",
+    "confidence": 0.7322959303855896,
+    "ground_truth": "ear-left"
+  },
+  {
+    "path": "22111801_230929080849937831_121_image02.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.7702224254608154,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "22114013_230703082808292831_121_image03.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.8670628070831299,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "22155863_231018085038522831_121_image01.png",
+    "anatomical_region": "ear-right",
+    "confidence": 0.8627169132232666,
+    "ground_truth": "ear-right"
+  },
+  {
+    "path": "22155863_231018085038522831_121_image02.png",
+    "anatomical_region": "ear-left",
+    "confidence": 0.7367988228797913,
+    "ground_truth": "ear-left"
+  },
+  {
+    "path": "22157358_230327084655941831_121_image07.png",
+    "anatomical_region": "vc-closed",
+    "confidence": 0.9147297739982605,
+    "ground_truth": "vc-closed"
+  },
+  {
+    "path": "22157358_230327084655941831_121_image08.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.8729217648506165,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "22158640_230327081806858831_121_image04.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.7242228388786316,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "22158640_230327081806858831_121_image07.png",
+    "anatomical_region": "vc-closed",
+    "confidence": 0.8812402486801147,
+    "ground_truth": "vc-closed"
+  },
+  {
+    "path": "22160111_231123094147396831_954_image01.png",
+    "anatomical_region": "ear-right",
+    "confidence": 0.6791629791259766,
+    "ground_truth": "ear-right"
+  },
+  {
+    "path": "22160111_231123094147396831_954_image03.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.5712475776672363,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "22160111_231123094147396831_954_image05.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.8327820897102356,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "22161247_231213090159744831_954_image03.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.5493379831314087,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "22161247_231213090159744831_954_image04.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.6862261295318604,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "22161247_231220142853674831_954_image02.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.8644766211509705,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "22161247_231220142853674831_954_image03.png",
+    "anatomical_region": "vc-closed",
+    "confidence": 0.6481480002403259,
+    "ground_truth": "vc-closed"
+  },
+  {
+    "path": "22161247_231220142853674831_954_image06.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.6774842143058777,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "22161247_231220142853674831_954_image09.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.6951639652252197,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "22162576_230905065625688831_954_image01.png",
+    "anatomical_region": "throat",
+    "confidence": 0.8579447269439697,
+    "ground_truth": "throat"
+  },
+  {
+    "path": "22162576_230905065625688831_954_image02.png",
+    "anatomical_region": "vc-closed",
+    "confidence": 0.4540533423423767,
+    "ground_truth": "vc-closed"
+  },
+  {
+    "path": "22162576_230906153710361831_954_image01.png",
+    "anatomical_region": "throat",
+    "confidence": 0.9505563974380493,
+    "ground_truth": "throat"
+  },
+  {
+    "path": "22162576_230912144918124831_954_image03.png",
+    "anatomical_region": "throat",
+    "confidence": 0.6209839582443237,
+    "ground_truth": "vc-closed"
+  },
+  {
+    "path": "23077742_230424111606385831_121_image02.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.6791428327560425,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "23077742_230424111606385831_121_image04.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.8481616973876953,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "23077757_230403152939756831_954_image02.png",
+    "anatomical_region": "vc-closed",
+    "confidence": 0.9329471588134766,
+    "ground_truth": "vc-closed"
+  },
+  {
+    "path": "23078142_231101101814193831_954_image03.png",
+    "anatomical_region": "ear-left",
+    "confidence": 0.9258144497871399,
+    "ground_truth": "ear-left"
+  },
+  {
+    "path": "23078697_230404142615060831_121_image02.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.8349838852882385,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "23078697_230404142615060831_121_image04.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.7698749899864197,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "23078697_230404142615060831_121_image05.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.6202821135520935,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "23078697_230404142615060831_121_image07.png",
+    "anatomical_region": "ear-right",
+    "confidence": 0.8770968914031982,
+    "ground_truth": "ear-right"
+  },
+  {
+    "path": "23078994_230405081302497831_121_image01.png",
+    "anatomical_region": "ear-right",
+    "confidence": 0.8614665269851685,
+    "ground_truth": "ear-right"
+  },
+  {
+    "path": "23078994_230405081302497831_121_image02.png",
+    "anatomical_region": "ear-left",
+    "confidence": 0.9204369187355042,
+    "ground_truth": "ear-left"
+  },
+  {
+    "path": "23078997_230405083240983831_121_image01.png",
+    "anatomical_region": "ear-right",
+    "confidence": 0.8969497680664062,
+    "ground_truth": "ear-right"
+  },
+  {
+    "path": "23078997_230405083240983831_121_image02.png",
+    "anatomical_region": "ear-left",
+    "confidence": 0.7311691045761108,
+    "ground_truth": "ear-left"
+  },
+  {
+    "path": "23078997_230405083240983831_121_image05.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.8829692006111145,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "23078997_230405083240983831_121_image06.png",
+    "anatomical_region": "vc-closed",
+    "confidence": 0.8914206027984619,
+    "ground_truth": "vc-closed"
+  },
+  {
+    "path": "23079204_230801085033209831_954_image06.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.871143639087677,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "23079283_230905080457493831_954_image03.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.6160135269165039,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "23079298_230411095149642831_121_image02.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.7292050123214722,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "23079298_230411095149642831_121_image07.png",
+    "anatomical_region": "vc-closed",
+    "confidence": 0.9065263867378235,
+    "ground_truth": "vc-closed"
+  },
+  {
+    "path": "23079362_230414151023080831_121_image03.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.8426487445831299,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "23079362_230414151023080831_121_image05.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.697824239730835,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "23080680_231027085814640831_121_image03.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.533912718296051,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "23080830_230517115121313831_954_image03.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.781936526298523,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "23080830_230517115121313831_954_image04.png",
+    "anatomical_region": "vc-closed",
+    "confidence": 0.7506133317947388,
+    "ground_truth": "vc-closed"
+  },
+  {
+    "path": "23080830_230517115121313831_954_image05.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.8068467378616333,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "23080830_230517115121313831_954_image06.png",
+    "anatomical_region": "vc-closed",
+    "confidence": 0.8609955310821533,
+    "ground_truth": "vc-closed"
+  },
+  {
+    "path": "23081629_230407095937623831_121_image07.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.8945811986923218,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "23082124_230428091722080831_954_image02.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.8689330220222473,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "23082290_230602145401139831_954_image06.png",
+    "anatomical_region": "throat",
+    "confidence": 0.9646914005279541,
+    "ground_truth": "throat"
+  },
+  {
+    "path": "23301219_231208104931498831_121_image03.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.8486053347587585,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "23301219_231208104931498831_121_image06.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.8473877906799316,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "23301898_231214110411619831_121_image01.png",
+    "anatomical_region": "ear-right",
+    "confidence": 0.8145363330841064,
+    "ground_truth": "ear-right"
+  },
+  {
+    "path": "23301942_231211084924551831_954_image03.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.6514884829521179,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "23301942_231211084924551831_954_image04.png",
+    "anatomical_region": "throat",
+    "confidence": 0.8816595077514648,
+    "ground_truth": "throat"
+  },
+  {
+    "path": "23302232_231211085718508831_954_image05.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.7808672785758972,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "23302232_231211085718508831_954_image07.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.8043335676193237,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "13135998_240329090725185831_121_image03.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.7557355165481567,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "13136475_240614135513901831_954_image03.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.930213212966919,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "13136475_240614135513901831_954_image04.png",
+    "anatomical_region": "vc-closed",
+    "confidence": 0.8239240646362305,
+    "ground_truth": "vc-closed"
+  },
+  {
+    "path": "13137211_240306082136481831_954_image04.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.5678601264953613,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "13137511_240918075921205831_121_image04.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.6600043177604675,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "13137864_240201144119392831_121_image04.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.6224724054336548,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "13137864_240201144119392831_121_image07.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.6327017545700073,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "13137864_240201144119392831_121_image09.png",
+    "anatomical_region": "throat",
+    "confidence": 0.7659199237823486,
+    "ground_truth": "throat"
+  },
+  {
+    "path": "13137944_240812091331820831_121_image04.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.8406447172164917,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "13137944_240812091331820831_121_image05.png",
+    "anatomical_region": "throat",
+    "confidence": 0.9653840065002441,
+    "ground_truth": "throat"
+  },
+  {
+    "path": "13138252_240829082201552831_121_image09.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.9199275374412537,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "13138867_240704080331798831_954_image01.png",
+    "anatomical_region": "vc-closed",
+    "confidence": 0.8645329475402832,
+    "ground_truth": "vc-closed"
+  },
+  {
+    "path": "13138867_240704080331798831_954_image02.png",
+    "anatomical_region": "vc-closed",
+    "confidence": 0.9147197604179382,
+    "ground_truth": "vc-closed"
+  },
+  {
+    "path": "13138867_240704080331798831_954_image04.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.7214752435684204,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "13138867_240704080331798831_954_image05.png",
+    "anatomical_region": "throat",
+    "confidence": 0.9566734433174133,
+    "ground_truth": "throat"
+  },
+  {
+    "path": "13140140_240104093719027831_954_image02.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.8371756076812744,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "13140140_240104093719027831_954_image06.png",
+    "anatomical_region": "ear-left",
+    "confidence": 0.8038893342018127,
+    "ground_truth": "ear-left"
+  },
+  {
+    "path": "13140140_240710091845428831_954_image01.png",
+    "anatomical_region": "ear-right",
+    "confidence": 0.915657103061676,
+    "ground_truth": "ear-right"
+  },
+  {
+    "path": "13140140_240710091845428831_954_image03.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.7544879913330078,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "13140140_240710091845428831_954_image05.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.7919371724128723,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "13140140_240710091845428831_954_image06.png",
+    "anatomical_region": "vc-closed",
+    "confidence": 0.7912436127662659,
+    "ground_truth": "vc-closed"
+  },
+  {
+    "path": "13140140_240710091845428831_954_image07.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.8831369280815125,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "13140140_241001094445032831_954_image02.png",
+    "anatomical_region": "vc-closed",
+    "confidence": 0.7180452346801758,
+    "ground_truth": "vc-closed"
+  },
+  {
+    "path": "13140140_241001094445032831_954_image03.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.8699852228164673,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "13140140_241001094445032831_954_image05.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.5527321100234985,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "13140429_240122094012938831_954_image03.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.792476236820221,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "13141410_240227081824840831_954_image04.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.5430294275283813,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "13141410_240227081824840831_954_image05.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.4894229471683502,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "13141410_240227081824840831_954_image07.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.9110488891601562,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "13141410_240227081824840831_954_image08.png",
+    "anatomical_region": "vc-closed",
+    "confidence": 0.8328030109405518,
+    "ground_truth": "vc-closed"
+  },
+  {
+    "path": "13141644_240319092100478831_121_image03.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.42741066217422485,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "13141644_240319092100478831_121_image04.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.639306366443634,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "13141644_240319092100478831_121_image05.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.7734377980232239,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "13141644_240319092100478831_121_image06.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.714691162109375,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "13141644_240319092100478831_121_image08.png",
+    "anatomical_region": "vc-closed",
+    "confidence": 0.668746292591095,
+    "ground_truth": "vc-closed"
+  },
+  {
+    "path": "13141644_241011081009932831_121_image01.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.8047266006469727,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "13141644_241011081009932831_121_image02.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.5605681538581848,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "13141644_241011081009932831_121_image06.png",
+    "anatomical_region": "vc-closed",
+    "confidence": 0.4782378673553467,
+    "ground_truth": "throat"
+  },
+  {
+    "path": "13141644_241011081009932831_121_image07.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.8201042413711548,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "13142046_240610084817440831_121_image04.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.7137455344200134,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "13142046_240610084817440831_121_image07.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.37717434763908386,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "13142046_240610084817440831_121_image08.png",
+    "anatomical_region": "throat",
+    "confidence": 0.8932262659072876,
+    "ground_truth": "throat"
+  },
+  {
+    "path": "13142427_240318080525353831_121_image04.png",
+    "anatomical_region": "throat",
+    "confidence": 0.7758407592773438,
+    "ground_truth": "throat"
+  },
+  {
+    "path": "13144258_240219083840316831_121_image08.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.871637761592865,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "13144271_240321094445974831_121_image06.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.9053738117218018,
+    "ground_truth": "vc-closed"
+  },
+  {
+    "path": "13148186_240313144957932831_954_image04.png",
+    "anatomical_region": "vc-open",
+    "confidence": 0.711629331111908,
+    "ground_truth": "vc-open"
+  },
+  {
+    "path": "13148338_240906134649350831_121_image02.png",
+    "anatomical_region": "nose-right",
+    "confidence": 0.5555917024612427,
+    "ground_truth": "nose-right"
+  },
+  {
+    "path": "13148338_240906134649350831_121_image04.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.7390000820159912,
+    "ground_truth": "nose-left"
+  },
+  {
+    "path": "13152052_240129081447318831_954_image04.png",
+    "anatomical_region": "nose-left",
+    "confidence": 0.5166322588920593,
+    "ground_truth": "nose-left"
+  }
+]

@@ -14,7 +14,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import warnings
-from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, classification_report, confusion_matrix
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, classification_report, confusion_matrix, roc_auc_score
+from sklearn.preprocessing import label_binarize
 warnings.filterwarnings('ignore')
 
 # Configuration
@@ -121,32 +122,32 @@ class EnsembleModel(nn.Module):
         return self.model(x)
 
 # Inference with TTA
-def predict_with_tta(model, image, device):
-    model.eval()
-    tta_transforms = get_tta_transforms()
-    predictions = []
+# def predict_with_tta(model, image, device):
+#     model.eval()
+#     tta_transforms = get_tta_transforms()
+#     predictions = []
     
-    with torch.no_grad():
-        for transform in tta_transforms:
-            # Apply TTA transform
-            img_array = image.cpu().numpy().transpose(1, 2, 0)
-            # Denormalize
-            mean = np.array([0.485, 0.456, 0.406])
-            std = np.array([0.229, 0.224, 0.225])
-            img_array = img_array * std + mean
-            img_array = (img_array * 255).astype(np.uint8)
+#     with torch.no_grad():
+#         for transform in tta_transforms:
+#             # Apply TTA transform
+#             img_array = image.cpu().numpy().transpose(1, 2, 0)
+#             # Denormalize
+#             mean = np.array([0.485, 0.456, 0.406])
+#             std = np.array([0.229, 0.224, 0.225])
+#             img_array = img_array * std + mean
+#             img_array = (img_array * 255).astype(np.uint8)
             
-            # Apply transform and predict
-            augmented = transform(image=img_array)
-            img_tensor = augmented['image'].unsqueeze(0).to(device)
+#             # Apply transform and predict
+#             augmented = transform(image=img_array)
+#             img_tensor = augmented['image'].unsqueeze(0).to(device)
             
-            output = model(img_tensor)
-            probs = torch.softmax(output, dim=1)
-            predictions.append(probs.cpu().numpy()[0])
+#             output = model(img_tensor)
+#             probs = torch.softmax(output, dim=1)
+#             predictions.append(probs.cpu().numpy()[0])
     
-    # Average predictions
-    avg_probs = np.mean(predictions, axis=0)
-    return avg_probs
+#     # Average predictions
+#     avg_probs = np.mean(predictions, axis=0)
+#     return avg_probs
 
 # IMPROVED: Main inference function with ensemble and TTA
 def inference():
@@ -167,6 +168,7 @@ def inference():
     # ========================================
     print('\n⏳ Loading all models...')
     loaded_models = []
+    model_info = []  # Track which model each belongs to
     
     for model_name in config.model_names:
         for fold in range(config.num_folds):
@@ -181,6 +183,7 @@ def inference():
             model.load_state_dict(torch.load(model_path, map_location=config.device))
             model.eval()
             loaded_models.append(model)
+            model_info.append({'name': model_name, 'fold': fold})
             print(f'✓ Loaded {model_path}')
     
     print(f'\n✓ Successfully loaded {len(loaded_models)} models')
@@ -196,6 +199,12 @@ def inference():
     all_confidences = []
     all_predictions = []  # Store predicted labels
     all_ground_truth = []  # Store true labels
+    all_predictions_proba = []  # Store probability predictions for AUROC
+    
+    # Track predictions per model architecture
+    model_predictions = {name: [] for name in config.model_names}
+    model_confidences = {name: [] for name in config.model_names}
+    model_predictions_proba = {name: [] for name in config.model_names}  # Store probabilities per model
     
     # ========================================
     # PROCESS EACH TEST IMAGE (EFFICIENT!)
@@ -213,8 +222,11 @@ def inference():
         
         all_predictions_prob = []
         
+        # Track predictions per model type
+        model_type_predictions = {name: [] for name in config.model_names}
+        
         # Use all loaded models (NO RELOADING!)
-        for model in loaded_models:
+        for idx, model in enumerate(loaded_models):
             fold_predictions = []
             
             with torch.no_grad():
@@ -229,6 +241,19 @@ def inference():
             # Average TTA predictions for this model
             avg_fold_pred = np.mean(fold_predictions, axis=0)
             all_predictions_prob.append(avg_fold_pred)
+            
+            # Track by model type
+            model_name = model_info[idx]['name']
+            model_type_predictions[model_name].append(avg_fold_pred)
+        
+        # Get predictions for each model architecture separately
+        for model_name in config.model_names:
+            if model_type_predictions[model_name]:
+                model_avg_probs = np.mean(model_type_predictions[model_name], axis=0)
+                predicted_class = np.argmax(model_avg_probs)
+                predicted_label = config.idx_to_class[predicted_class]
+                model_predictions[model_name].append(predicted_label)
+                model_confidences[model_name].append(float(model_avg_probs[predicted_class]))
         
         # Average all predictions (ensemble)
         if all_predictions_prob:
@@ -236,6 +261,7 @@ def inference():
             predicted_class = np.argmax(final_probs)
             predicted_label = config.idx_to_class[predicted_class]
             confidence = final_probs[predicted_class]
+            all_predictions_proba.append(final_probs)  # Store final probabilities
         else:
             # Fallback if no models found
             predicted_label = 'throat'  # Default to most uncertain class
@@ -303,16 +329,42 @@ def inference():
     weighted_recall = recall_score(all_ground_truth, all_predictions, average='weighted', zero_division=0)
     weighted_f1 = f1_score(all_ground_truth, all_predictions, average='weighted', zero_division=0)
     
+    # Calculate AUROC score (multi-class)
+    # Binarize the ground truth labels for multi-class AUROC calculation
+    y_true_binarized = label_binarize(all_ground_truth, classes=config.class_names)
+    all_predictions_proba_array = np.array(all_predictions_proba)
+    
+    try:
+        # Calculate macro and weighted AUROC
+        auroc_macro = roc_auc_score(y_true_binarized, all_predictions_proba_array, average='macro', multi_class='ovr')
+        auroc_weighted = roc_auc_score(y_true_binarized, all_predictions_proba_array, average='weighted', multi_class='ovr')
+        
+        # Calculate per-class AUROC
+        per_class_auroc = []
+        for i in range(len(config.class_names)):
+            try:
+                auroc_class = roc_auc_score(y_true_binarized[:, i], all_predictions_proba_array[:, i])
+                per_class_auroc.append(auroc_class)
+            except:
+                per_class_auroc.append(0.0)  # Handle case where class is not present
+    except Exception as e:
+        print(f'\n⚠️  Warning: Could not calculate AUROC: {e}')
+        auroc_macro = 0.0
+        auroc_weighted = 0.0
+        per_class_auroc = [0.0] * len(config.class_names)
+    
     print(f'\n📊 Overall Metrics:')
-    print(f'  Accuracy:          {overall_accuracy:.4f} ({overall_accuracy*100:.2f}%)')
+    print(f'  Accuracy:           {overall_accuracy:.4f} ({overall_accuracy*100:.2f}%)')
     print(f'  Weighted Precision: {weighted_precision:.4f}')
     print(f'  Weighted Recall:    {weighted_recall:.4f}')
     print(f'  Weighted F1-Score:  {weighted_f1:.4f}')
+    print(f'  AUROC (Macro):      {auroc_macro:.4f}')
+    print(f'  AUROC (Weighted):   {auroc_weighted:.4f}')
     
     # Per-class metrics
     print(f'\n📋 Per-Class Metrics:')
-    print(f'{"Class":<15} {"Precision":<12} {"Recall":<12} {"F1-Score":<12} {"Support":<10}')
-    print('-' * 65)
+    print(f'{"Class":<15} {"Precision":<12} {"Recall":<12} {"F1-Score":<12} {"AUROC":<12} {"Support":<10}')
+    print('-' * 77)
     
     per_class_precision = precision_score(all_ground_truth, all_predictions, average=None, labels=config.class_names, zero_division=0)
     per_class_recall = recall_score(all_ground_truth, all_predictions, average=None, labels=config.class_names, zero_division=0)
@@ -322,7 +374,7 @@ def inference():
     class_support = {cls: all_ground_truth.count(cls) for cls in config.class_names}
     
     for i, class_name in enumerate(config.class_names):
-        print(f'{class_name:<15} {per_class_precision[i]:<12.4f} {per_class_recall[i]:<12.4f} {per_class_f1[i]:<12.4f} {class_support[class_name]:<10}')
+        print(f'{class_name:<15} {per_class_precision[i]:<12.4f} {per_class_recall[i]:<12.4f} {per_class_f1[i]:<12.4f} {per_class_auroc[i]:<12.4f} {class_support[class_name]:<10}')
     
     # Detailed classification report
     print('\n' + '='*60)
@@ -395,7 +447,9 @@ def inference():
             'accuracy': float(overall_accuracy),
             'weighted_precision': float(weighted_precision),
             'weighted_recall': float(weighted_recall),
-            'weighted_f1': float(weighted_f1)
+            'weighted_f1': float(weighted_f1),
+            'auroc_macro': float(auroc_macro),
+            'auroc_weighted': float(auroc_weighted)
         },
         'per_class_metrics': {},
         'confusion_matrix': cm.tolist(),
@@ -407,13 +461,197 @@ def inference():
             'precision': float(per_class_precision[i]),
             'recall': float(per_class_recall[i]),
             'f1_score': float(per_class_f1[i]),
+            'auroc': float(per_class_auroc[i]),
             'support': int(class_support[class_name])
         }
+    
+    # ========================================
+    # MODEL COMPARISON SECTION
+    # ========================================
+    print('\n' + '='*60)
+    print('MODEL ARCHITECTURE COMPARISON')
+    print('='*60)
+    
+    model_comparison = {}
+    
+    for model_name in config.model_names:
+        if not model_predictions[model_name]:
+            continue
+            
+        # Calculate metrics for this model
+        model_acc = accuracy_score(all_ground_truth, model_predictions[model_name])
+        model_prec = precision_score(all_ground_truth, model_predictions[model_name], 
+                                     average='weighted', zero_division=0)
+        model_rec = recall_score(all_ground_truth, model_predictions[model_name], 
+                                average='weighted', zero_division=0)
+        model_f1 = f1_score(all_ground_truth, model_predictions[model_name], 
+                           average='weighted', zero_division=0)
+        
+        # Calculate per-class metrics
+        model_per_class_prec = precision_score(all_ground_truth, model_predictions[model_name], 
+                                               average=None, labels=config.class_names, zero_division=0)
+        model_per_class_rec = recall_score(all_ground_truth, model_predictions[model_name], 
+                                          average=None, labels=config.class_names, zero_division=0)
+        model_per_class_f1 = f1_score(all_ground_truth, model_predictions[model_name], 
+                                     average=None, labels=config.class_names, zero_division=0)
+        
+        # Confidence statistics
+        avg_conf = np.mean(model_confidences[model_name])
+        
+        # Store in comparison dict
+        model_comparison[model_name] = {
+            'accuracy': float(model_acc),
+            'weighted_precision': float(model_prec),
+            'weighted_recall': float(model_rec),
+            'weighted_f1': float(model_f1),
+            'avg_confidence': float(avg_conf),
+            'per_class_precision': model_per_class_prec.tolist(),
+            'per_class_recall': model_per_class_rec.tolist(),
+            'per_class_f1': model_per_class_f1.tolist()
+        }
+        
+        print(f'\n📊 {model_name.upper()}:')
+        print(f'  Accuracy:           {model_acc:.4f} ({model_acc*100:.2f}%)')
+        print(f'  Weighted Precision: {model_prec:.4f}')
+        print(f'  Weighted Recall:    {model_rec:.4f}')
+        print(f'  Weighted F1-Score:  {model_f1:.4f}')
+        print(f'  Avg Confidence:     {avg_conf:.4f}')
+        
+        # Print per-class F1 scores
+        print(f'\n  Per-Class F1-Scores:')
+        for i, class_name in enumerate(config.class_names):
+            print(f'    {class_name:<15}: {model_per_class_f1[i]:.4f}')
+    
+    # Comparison summary
+    print('\n' + '-'*60)
+    print('COMPARISON SUMMARY:')
+    print('-'*60)
+    
+    if len(model_comparison) == 2:
+        model_names_list = list(model_comparison.keys())
+        model1, model2 = model_names_list[0], model_names_list[1]
+        
+        acc_diff = model_comparison[model1]['accuracy'] - model_comparison[model2]['accuracy']
+        f1_diff = model_comparison[model1]['weighted_f1'] - model_comparison[model2]['weighted_f1']
+        conf_diff = model_comparison[model1]['avg_confidence'] - model_comparison[model2]['avg_confidence']
+        
+        print(f'\n{model1} vs {model2}:')
+        print(f'  Accuracy Difference:    {acc_diff:+.4f} ({abs(acc_diff)*100:.2f}%)')
+        print(f'  F1-Score Difference:    {f1_diff:+.4f}')
+        print(f'  Confidence Difference:  {conf_diff:+.4f}')
+        
+        if abs(acc_diff) > 0.01:
+            better_model = model1 if acc_diff > 0 else model2
+            print(f'\n  🏆 Best Model by Accuracy: {better_model}')
+        else:
+            print(f'\n  ⚖️  Models perform similarly (difference < 1%)')
+        
+        # Agreement analysis
+        agreements = sum(1 for i in range(len(all_ground_truth)) 
+                        if model_predictions[model1][i] == model_predictions[model2][i])
+        agreement_rate = agreements / len(all_ground_truth)
+        
+        both_correct = sum(1 for i in range(len(all_ground_truth))
+                          if model_predictions[model1][i] == all_ground_truth[i] 
+                          and model_predictions[model2][i] == all_ground_truth[i])
+        both_wrong = sum(1 for i in range(len(all_ground_truth))
+                        if model_predictions[model1][i] != all_ground_truth[i] 
+                        and model_predictions[model2][i] != all_ground_truth[i])
+        one_correct = len(all_ground_truth) - both_correct - both_wrong
+        
+        print(f'\n  Model Agreement:')
+        print(f'    Agreement Rate:     {agreement_rate:.2%}')
+        print(f'    Both Correct:       {both_correct} ({both_correct/len(all_ground_truth)*100:.1f}%)')
+        print(f'    Both Wrong:         {both_wrong} ({both_wrong/len(all_ground_truth)*100:.1f}%)')
+        print(f'    One Correct:        {one_correct} ({one_correct/len(all_ground_truth)*100:.1f}%)')
+        
+        # Per-class comparison
+        print(f'\n  Per-Class F1-Score Comparison:')
+        print(f'  {"Class":<15} {model1[:10]:<12} {model2[:10]:<12} {"Difference":<12}')
+        print('  ' + '-'*54)
+        
+        for i, class_name in enumerate(config.class_names):
+            f1_1 = model_comparison[model1]['per_class_f1'][i]
+            f1_2 = model_comparison[model2]['per_class_f1'][i]
+            diff = f1_1 - f1_2
+            marker = '✓' if diff > 0.05 else ('✗' if diff < -0.05 else '≈')
+            print(f'  {class_name:<15} {f1_1:<12.4f} {f1_2:<12.4f} {diff:+.4f} {marker}')
+    
+    # Create comparison visualization
+    if len(model_comparison) >= 2:
+        fig, axes = plt.subplots(2, 2, figsize=(16, 12))
+        
+        # 1. Overall Metrics Comparison
+        metrics = ['accuracy', 'weighted_precision', 'weighted_recall', 'weighted_f1']
+        metric_names = ['Accuracy', 'Precision', 'Recall', 'F1-Score']
+        
+        x = np.arange(len(metrics))
+        width = 0.35
+        
+        for idx, model_name in enumerate(model_comparison.keys()):
+            values = [model_comparison[model_name][m] for m in metrics]
+            axes[0, 0].bar(x + idx*width, values, width, label=model_name, alpha=0.8)
+        
+        axes[0, 0].set_xlabel('Metrics')
+        axes[0, 0].set_ylabel('Score')
+        axes[0, 0].set_title('Overall Performance Comparison')
+        axes[0, 0].set_xticks(x + width/2)
+        axes[0, 0].set_xticklabels(metric_names)
+        axes[0, 0].legend()
+        axes[0, 0].grid(axis='y', alpha=0.3)
+        axes[0, 0].set_ylim([0, 1.0])
+        
+        # 2. Per-Class F1-Score Comparison
+        x_classes = np.arange(len(config.class_names))
+        
+        for idx, model_name in enumerate(model_comparison.keys()):
+            f1_scores = model_comparison[model_name]['per_class_f1']
+            axes[0, 1].bar(x_classes + idx*width, f1_scores, width, label=model_name, alpha=0.8)
+        
+        axes[0, 1].set_xlabel('Class')
+        axes[0, 1].set_ylabel('F1-Score')
+        axes[0, 1].set_title('Per-Class F1-Score Comparison')
+        axes[0, 1].set_xticks(x_classes + width/2)
+        axes[0, 1].set_xticklabels(config.class_names, rotation=45, ha='right')
+        axes[0, 1].legend()
+        axes[0, 1].grid(axis='y', alpha=0.3)
+        axes[0, 1].set_ylim([0, 1.0])
+        
+        # 3. Confidence Distribution
+        for model_name in model_comparison.keys():
+            axes[1, 0].hist(model_confidences[model_name], bins=20, alpha=0.6, label=model_name, edgecolor='black')
+        
+        axes[1, 0].set_xlabel('Confidence')
+        axes[1, 0].set_ylabel('Frequency')
+        axes[1, 0].set_title('Prediction Confidence Distribution')
+        axes[1, 0].legend()
+        axes[1, 0].grid(axis='y', alpha=0.3)
+        
+        # 4. Agreement Visualization (if 2 models)
+        if len(model_comparison) == 2:
+            agreement_data = [both_correct, both_wrong, one_correct]
+            agreement_labels = ['Both Correct', 'Both Wrong', 'One Correct']
+            colors = ['#2ecc71', '#e74c3c', '#f39c12']
+            
+            axes[1, 1].pie(agreement_data, labels=agreement_labels, autopct='%1.1f%%',
+                          colors=colors, startangle=90)
+            axes[1, 1].set_title('Model Agreement Analysis')
+        else:
+            axes[1, 1].text(0.5, 0.5, 'Agreement analysis\nrequires 2 models', 
+                           ha='center', va='center', fontsize=12)
+            axes[1, 1].axis('off')
+        
+        plt.tight_layout()
+        plt.savefig('model_comparison.png', dpi=300, bbox_inches='tight')
+        print(f'\n✓ Model comparison plot saved to model_comparison.png')
+    
+    # Add model comparison to metrics dict
+    metrics_dict['model_comparison'] = model_comparison
     
     with open('test_metrics.json', 'w') as f:
         json.dump(metrics_dict, f, indent=2)
     
-    print(f'\n✓ Test metrics saved to test_metrics.json')
+    print(f'\n✓ Test metrics (with model comparison) saved to test_metrics.json')
     print('='*60)
 
 if __name__ == '__main__':

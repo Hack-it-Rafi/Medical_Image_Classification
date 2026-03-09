@@ -1,0 +1,137 @@
+Prediction distribution:
+  ear-left: 46
+  ear-right: 44
+  nose-left: 185
+  nose-right: 122
+  throat: 27
+  vc-closed: 62
+  vc-open: 80
+
+Confidence statistics:
+  Average: 0.7704
+  Min: 0.3091
+  Max: 0.9719
+  Low confidence (<0.8): 282 samples
+
+============================================================
+TEST SET EVALUATION METRICS
+============================================================
+
+📊 Overall Metrics:
+  Accuracy:           0.9594 (95.94%)
+  Weighted Precision: 0.9594
+  Weighted Recall:    0.9594
+  Weighted F1-Score:  0.9592
+  AUROC (Macro):      0.9956
+  AUROC (Weighted):   0.9944
+
+📋 Per-Class Metrics:
+Class           Precision    Recall       F1-Score     AUROC        Support
+-----------------------------------------------------------------------------
+ear-left        0.9783       1.0000       0.9890       1.0000       45
+ear-right       0.9773       0.9773       0.9773       0.9999       44
+nose-left       0.9405       0.9667       0.9534       0.9950       180
+nose-right      0.9508       0.9062       0.9280       0.9925       128
+throat          0.9630       0.9630       0.9630       0.9999       27
+vc-closed       0.9677       0.9677       0.9677       0.9913       62
+vc-open         0.9875       0.9875       0.9875       0.9905       80
+
+============================================================
+DETAILED CLASSIFICATION REPORT
+============================================================
+              precision    recall  f1-score   support
+
+    ear-left     0.9783    1.0000    0.9890        45
+   ear-right     0.9773    0.9773    0.9773        44
+   nose-left     0.9405    0.9667    0.9534       180
+  nose-right     0.9508    0.9062    0.9280       128
+      throat     0.9630    0.9630    0.9630        27
+   vc-closed     0.9677    0.9677    0.9677        62
+     vc-open     0.9875    0.9875    0.9875        80
+
+    accuracy                         0.9594       566
+   macro avg     0.9664    0.9669    0.9666       566
+weighted avg     0.9594    0.9594    0.9592       566
+
+
+============================================================
+CONFUSION MATRIX
+============================================================
+
+Confusion Matrix (rows=actual, columns=predicted):
+                   ear-left   ear-right   nose-left  nose-right      throat   vc-closed     vc-open
+---------------------------------------------------------------------------------------------------
+ear-left                 45           0           0           0           0           0           0
+ear-right                 1          43           0           0           0           0           0
+nose-left                 0           0         174           6           0           0           0
+nose-right                0           1          11         116           0           0           0
+throat                    0           0           0           0          26           1           0
+vc-closed                 0           0           0           0           1          60           1
+vc-open                   0           0           0           0           0           1          79
+
+✓ Confusion matrix plot saved to confusion_matrix.png
+✓ Normalized confusion matrix plot saved to confusion_matrix_normalized.png
+
+============================================================
+MODEL ARCHITECTURE COMPARISON
+============================================================
+
+📊 CONVNEXT_TINY:
+  Accuracy:           0.9594 (95.94%)
+  Weighted Precision: 0.9594
+  Weighted Recall:    0.9594
+  Weighted F1-Score:  0.9592
+  Avg Confidence:     0.8083
+
+  Per-Class F1-Scores:
+    ear-left       : 0.9890
+    ear-right      : 0.9773
+    nose-left      : 0.9534
+    nose-right     : 0.9280
+    throat         : 0.9630
+    vc-closed      : 0.9677
+    vc-open        : 0.9875
+
+📊 EFFICIENTNET_B3:
+  Accuracy:           0.9470 (94.70%)
+  Weighted Precision: 0.9479
+  Weighted Recall:    0.9470
+  Weighted F1-Score:  0.9467
+  Avg Confidence:     0.7368
+
+  Per-Class F1-Scores:
+    ear-left       : 0.9663
+    ear-right      : 0.9545
+    nose-left      : 0.9405
+    nose-right     : 0.9143
+    throat         : 0.9643
+    vc-closed      : 0.9672
+    vc-open        : 0.9753
+
+------------------------------------------------------------
+COMPARISON SUMMARY:
+------------------------------------------------------------
+
+convnext_tiny vs efficientnet_b3:
+  Accuracy Difference:    +0.0124 (1.24%)
+  F1-Score Difference:    +0.0125
+  Confidence Difference:  +0.0715
+
+  🏆 Best Model by Accuracy: convnext_tiny
+
+  Model Agreement:
+    Agreement Rate:     96.11%
+    Both Correct:       529 (93.5%)
+    Both Wrong:         16 (2.8%)
+    One Correct:        21 (3.7%)
+
+  Per-Class F1-Score Comparison:
+  Class           convnext_t   efficientn   Difference
+  ------------------------------------------------------
+  ear-left        0.9890       0.9663       +0.0227 ≈
+  ear-right       0.9773       0.9545       +0.0227 ≈
+  nose-left       0.9534       0.9405       +0.0129 ≈
+  nose-right      0.9280       0.9143       +0.0137 ≈
+  throat          0.9630       0.9643       -0.0013 ≈
+  vc-closed       0.9677       0.9672       +0.0005 ≈
+  vc-open         0.9875       0.9753       +0.0122 ≈
